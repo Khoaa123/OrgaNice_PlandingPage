@@ -499,6 +499,9 @@ export default function Home() {
                     <Icons.Check /> Import Browser Bookmarks
                   </li>
                   <li className="flex gap-3 text-slate-700 text-sm">
+                    <Icons.Check /> Trash Bin & Recovery
+                  </li>
+                  <li className="flex gap-3 text-slate-700 text-sm">
                     <Icons.Check /> Priority Support
                   </li>
                 </ul>
