@@ -511,17 +511,17 @@ export default function Home() {
               </div>
 
               {/* 3. Lifetime Plan */}
-              <div className="p-8 rounded-2xl border border-amber-200 bg-white hover:border-amber-300 transition flex flex-col h-full relative">
-                <div className="absolute top-0 right-0 bg-amber-100 text-amber-700 text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
+              <div className="p-8 rounded-2xl border border-indigo-200 bg-white hover:border-indigo-300 transition flex flex-col h-full relative">
+                <div className="absolute top-0 right-0 bg-indigo-100 text-indigo-700 text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
                   ONE-TIME
                 </div>
-                <h3 className="font-bold text-xl mb-2 text-slate-900">
+                <h3 className="font-bold text-xl mb-2 text-indigo-700">
                   Lifetime
                 </h3>
-                <div className="text-4xl font-bold mb-6 text-slate-900">
+                <div className="text-4xl font-bold mb-6 text-indigo-900">
                   $39
                 </div>
-                <p className="text-slate-500 text-sm mb-8 pb-8 border-b border-slate-100">
+                <p className="text-indigo-500 text-sm mb-8 pb-8 border-b border-indigo-100">
                   Pay once, own it forever. Includes all future Pro updates.
                 </p>
                 <ul className="space-y-4 mb-8 flex-1">
