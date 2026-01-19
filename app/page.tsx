@@ -6,6 +6,7 @@ import Image from "next/image";
 import Logo from "../public/logo.png";
 import Link from "next/link";
 import Header from "./components/Header";
+import { SmartPricingButton } from "./components/SmartPricingButton";
 // --- SEO RIÊNG CHO TRANG CHỦ ---
 export const metadata: Metadata = {
   title: "OrgaNice - Clean & Modern Tab Manager",
@@ -505,9 +506,9 @@ export default function Home() {
                     <Icons.Check /> Priority Support
                   </li>
                 </ul>
-                <button className="w-full py-3.5 rounded-lg bg-indigo-600 text-white font-bold hover:bg-indigo-700 transition shadow-sm mt-auto">
+                <SmartPricingButton className="w-full py-3.5 rounded-lg bg-indigo-600 text-white font-bold hover:bg-indigo-700 transition shadow-sm mt-auto">
                   UPGRADE
-                </button>
+                </SmartPricingButton>
               </div>
 
               {/* 3. Lifetime Plan */}
@@ -538,9 +539,9 @@ export default function Home() {
                     <Icons.Check /> Support Indie Development
                   </li>
                 </ul>
-                <button className="w-full py-3.5 rounded-lg bg-indigo-600 text-white font-bold hover:bg-indigo-700 transition shadow-sm mt-auto">
+                <SmartPricingButton className="w-full py-3.5 rounded-lg bg-indigo-600 text-white font-bold hover:bg-indigo-700 transition shadow-sm mt-auto">
                   UPGRADE
-                </button>
+                </SmartPricingButton>
               </div>
             </div>
           </div>
