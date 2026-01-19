@@ -469,7 +469,7 @@ export default function Home() {
               </div>
 
               {/* 2. Pro Plan (Balanced View) */}
-              <div className="p-8 rounded-2xl border border-indigo-200 bg-white hover:border-indigo-300 transition flex flex-col h-full relative">
+              <div className="p-8 rounded-2xl border border-slate-200 bg-white hover:border-indigo-300 overflow-hidden transition flex flex-col h-full relative">
                 <div className="absolute top-0 right-0 bg-indigo-100 text-indigo-700 text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
                   SUBSCRIPTION
                 </div>
@@ -506,12 +506,12 @@ export default function Home() {
                   </li>
                 </ul>
                 <button className="w-full py-3.5 rounded-lg bg-indigo-600 text-white font-bold hover:bg-indigo-700 transition shadow-sm mt-auto">
-                  Start Free Trial
+                  UPGRADE
                 </button>
               </div>
 
               {/* 3. Lifetime Plan */}
-              <div className="p-8 rounded-2xl border border-indigo-200 bg-white hover:border-indigo-300 transition flex flex-col h-full relative">
+              <div className="p-8 rounded-2xl border border-slate-200 bg-white hover:border-indigo-300 overflow-hidden transition flex flex-col h-full relative">
                 <div className="absolute top-0 right-0 bg-indigo-100 text-indigo-700 text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
                   ONE-TIME
                 </div>
@@ -521,7 +521,7 @@ export default function Home() {
                 <div className="text-4xl font-bold mb-6 text-indigo-900">
                   $39
                 </div>
-                <p className="text-indigo-500 text-sm mb-8 pb-8 border-b border-indigo-100">
+                <p className="text-slate-500 text-sm mb-8 pb-8 border-b border-indigo-100">
                   Pay once, own it forever. Includes all future Pro updates.
                 </p>
                 <ul className="space-y-4 mb-8 flex-1">
@@ -538,8 +538,8 @@ export default function Home() {
                     <Icons.Check /> Support Indie Development
                   </li>
                 </ul>
-                <button className="w-full py-3.5 rounded-lg border border-amber-300 bg-amber-50 text-amber-900 font-bold hover:bg-amber-100 transition mt-auto">
-                  Get Lifetime Access
+                <button className="w-full py-3.5 rounded-lg bg-indigo-600 text-white font-bold hover:bg-indigo-700 transition shadow-sm mt-auto">
+                  UPGRADE
                 </button>
               </div>
             </div>
