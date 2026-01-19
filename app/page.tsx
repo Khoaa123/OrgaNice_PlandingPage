@@ -520,7 +520,7 @@ export default function Home() {
                   Lifetime
                 </h3>
                 <div className="text-4xl font-bold mb-6 text-indigo-900">
-                  $39
+                  $49
                 </div>
                 <p className="text-slate-500 text-sm mb-8 pb-8 border-b border-indigo-100">
                   Pay once, own it forever. Includes all future Pro updates.
