@@ -18,31 +18,21 @@ export const SmartPricingButton = ({
   ...props
 }: Props) => {
   const handleClick = () => {
-    // 1. Kiểm tra môi trường có phải Chrome/Chromium Desktop không
     const isChrome =
       typeof window !== "undefined" &&
       (window as any).chrome &&
       (window as any).chrome.runtime;
 
     if (isChrome) {
-      // 2. Thử gửi tin nhắn vào Extension
-      console.log("Attempting to connect to extension:", EXTENSION_ID);
-
       try {
         (window as any).chrome.runtime.sendMessage(
           EXTENSION_ID,
           { action: "OPEN_UPGRADE_FLOW" },
           (response: any) => {
-            // Kiểm tra lỗi (nếu extension chưa cài hoặc bị tắt, lastError sẽ xuất hiện)
             const lastError = (window as any).chrome.runtime.lastError;
-
             if (lastError || !response?.success) {
-              console.log("Extension not found or error:", lastError);
               // CASE B: Chưa cài -> Mở Chrome Store
               window.open(STORE_URL, "_blank");
-            } else {
-              // CASE A: Đã cài -> Extension đã tự mở tab -> Web không cần làm gì thêm
-              console.log("Extension detected & opened.");
             }
           },
         );
