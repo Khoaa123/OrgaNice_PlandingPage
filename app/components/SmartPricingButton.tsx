@@ -4,7 +4,7 @@
 import React from "react";
 
 // ID Extension của bạn (Lấy từ link store bạn cung cấp) , sau này đổi lại khi lên production
-const EXTENSION_ID = "jhfnnidflahoofgpgefhbbojbjbhhhcj";
+const EXTENSION_ID = "nohkfpabhnpjiijhgmaecbnnkdphahkh";
 const STORE_URL = `https://chromewebstore.google.com/detail/nohkfpabhnpjiijhgmaecbnnkdphahkh?utm_source=item-share-cb`;
 
 interface Props extends React.ButtonHTMLAttributes<HTMLButtonElement> {

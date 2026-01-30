@@ -13,8 +13,8 @@ const faqs = [
     a: "We have a dedicated 'Import from Toby' feature in the settings. It reads your Toby backup and organizes it into OrgaNice collections instantly.",
   },
   {
-    q: "What is the difference between Pro and Lifetime?",
-    a: "They have the exact same features. Pro is a subscription (pay monthly/yearly), while Lifetime is a single payment for permanent access.",
+    q: "Is my browsing data private?",
+    a: "Absolutely. OrgaNice is designed with a 'Local-First' architecture. Your tabs and notes live on your device. If you use Cloud Sync (Pro), your data is securely encrypted in the cloud and accessible only by you.",
   },
 ];
 

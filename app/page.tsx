@@ -1,15 +1,14 @@
-// app/page.tsx
 import type { Metadata } from "next";
 import { Icons } from "./components/Icons";
 import FaqSection from "./components/FaqSection";
 import Image from "next/image";
-import Logo from "../public/logo.png";
-import Link from "next/link";
+import Hero from "@/public/hero.png";
+import NestedFolder from "@/public/nestedfolder.png";
 import Header from "./components/Header";
 import { SmartPricingButton } from "./components/SmartPricingButton";
 // --- SEO RIÊNG CHO TRANG CHỦ ---
 export const metadata: Metadata = {
-  title: "OrgaNice - Clean & Modern Tab Manager",
+  title: "OrgaNice – Smart Tab Manager with Nested Folders",
   description:
     "Stop tab chaos. Organize browser tabs with nested folders, cloud sync, and quick notes. The minimalist alternative to OneTab and Session Buddy.",
   keywords: [
@@ -67,20 +66,21 @@ export default function Home() {
           </div>
 
           {/* Hero Image Mockup */}
-          <div className="max-w-5xl mx-auto px-2">
-            <div className="rounded-xl overflow-hidden shadow-2xl border border-slate-200 bg-slate-50 aspect-[16/10] relative group transition-all hover:shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)]">
-              {/* Lưu ý: Sau này thay bằng thẻ <Image /> của Next.js */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-slate-300">
-                <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 max-w-sm text-center">
-                  <p className="font-medium text-slate-400 mb-2">
-                    📸 App Screenshot
-                  </p>
-                  <p className="text-sm text-slate-300">
-                    Show: Sidebar with Nested Folders + Floating Note + Search
-                    Bar
-                  </p>
-                </div>
-              </div>
+          <div className="max-w-5xl h-fit mx-auto px-2">
+            <div
+              className="rounded-xl overflow-hidden border border-slate-300 bg-slate-50 relative group transition-all"
+              style={{ boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px" }}
+            >
+              {" "}
+              <Image
+                src={Hero}
+                alt="App Screenshot"
+                width={1200}
+                height={750} // hoặc đúng tỷ lệ ảnh của bạn
+                style={{ objectFit: "cover" }}
+                className="w-full h-auto"
+                priority
+              />
             </div>
           </div>
         </section>
@@ -103,8 +103,8 @@ export default function Home() {
 
             <div className="grid md:grid-cols-3 gap-8">
               {/* Feature Block: Structure */}
-              <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-md transition">
-                <div className="w-10 h-10 bg-white text-blue-600 rounded-lg flex items-center justify-center mb-4 shadow-sm border border-slate-100">
+              <div className="bg-slate-50 p-8 rounded-2xl border border-slate-200 hover:border-indigo-300 hover:shadow-lg transition">
+                <div className="w-10 h-10 bg-white text-indigo-600 rounded-lg flex items-center justify-center mb-4 shadow-sm ">
                   <Icons.Layout />
                 </div>
                 <h4 className="text-xl font-bold mb-4 text-slate-900">
@@ -127,8 +127,8 @@ export default function Home() {
               </div>
 
               {/* Feature Block: Tab Mastery */}
-              <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-md transition">
-                <div className="w-10 h-10 bg-white text-indigo-600 rounded-lg flex items-center justify-center mb-4 shadow-sm border border-slate-100">
+              <div className="bg-slate-50 p-8 rounded-2xl border border-slate-200 hover:border-indigo-300 hover:shadow-lg transition">
+                <div className="w-10 h-10 bg-white text-indigo-600 rounded-lg flex items-center justify-center mb-4 shadow-sm ">
                   <Icons.Move />
                 </div>
                 <h4 className="text-xl font-bold mb-4 text-slate-900">
@@ -151,8 +151,8 @@ export default function Home() {
               </div>
 
               {/* Feature Block: Notes & Utilities */}
-              <div className="bg-slate-50 p-8 rounded-2xl border border-slate-100 hover:shadow-md transition">
-                <div className="w-10 h-10 bg-white text-amber-600 rounded-lg flex items-center justify-center mb-4 shadow-sm border border-slate-100">
+              <div className="bg-slate-50 p-8 rounded-2xl border border-slate-200 hover:border-indigo-300 hover:shadow-lg transition">
+                <div className="w-10 h-10 bg-white text-indigo-600 rounded-lg flex items-center justify-center mb-4 shadow-sm ">
                   <Icons.Edit />
                 </div>
                 <h4 className="text-xl font-bold mb-4 text-slate-900">
@@ -182,117 +182,98 @@ export default function Home() {
           id="pro-features"
           className="py-24 space-y-32 bg-slate-50 border-y border-slate-200"
         >
-          <div className="max-w-6xl mx-auto px-4 text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
-              Upgrade for Ultimate Power
-            </h2>
-            <p className="mt-4 text-slate-500">
-              Take your productivity to the next level with OrgaNice Pro.
-            </p>
-          </div>
-
-          {/* Pro Feature 1: Nested Folders */}
           <div className="max-w-6xl mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-16 items-center">
-              <div className="order-2 md:order-1 relative">
-                <div className="relative bg-white border border-slate-200 rounded-2xl shadow-xl aspect-[4/3] flex items-center justify-center text-slate-300">
-                  [Image: Tree View with deeply nested folders]
-                </div>
-              </div>
-              <div className="order-1 md:order-2">
-                <div className="flex items-center gap-5 mb-6">
-                  <div className="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center shrink-0">
-                    <Icons.Folder />
+            {/* Header */}
+            <div className="text-center mb-20">
+              <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
+                Upgrade for Ultimate Power
+              </h2>
+              <p className="mt-4 text-slate-500 text-lg">
+                Take your productivity to the next level with OrgaNice Pro.
+              </p>
+            </div>
+
+            {/* 1. HERO FEATURE: NESTED FOLDERS (Giữ lại ảnh vì bạn đã có) */}
+            <div className="mb-24">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                {/* Text Side */}
+                <div className="order-2 md:order-1">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center shrink-0">
+                      <Icons.Folder />
+                    </div>
+                    <h3 className="text-2xl md:text-3xl font-bold text-slate-900">
+                      Unlimited Nested Folders
+                    </h3>
                   </div>
-                  <h2 className="text-3xl font-bold text-slate-900">
-                    Unlimited Nested Folders
-                  </h2>
+                  <p className="text-lg text-slate-600 leading-relaxed mb-6">
+                    Break free from flat lists. Organize your work with{" "}
+                    <strong>folders inside folders</strong>, without any depth
+                    limits. Perfect for large projects, long-term research, and
+                    complex workflows.
+                  </p>
                 </div>
-                <p className="text-lg text-slate-500 leading-relaxed">
-                  Organize your work with{" "}
-                  <strong>folders inside folders</strong>, without any depth
-                  limits. Perfect for large projects, long-term research, and
-                  complex workflows.
-                </p>
+
+                {/* Image Side */}
+                <div className="order-1 md:order-2 relative">
+                  <div className="relative rounded-2xl shadow-2xl shadow-slate-200 w-full h-[400px] md:h-[500px] overflow-hidden border border-slate-200 bg-white">
+                    {/* Lưu ý: Đảm bảo đường dẫn ảnh đúng */}
+                    <Image
+                      src={NestedFolder}
+                      alt="Tree View with deeply nested folders"
+                      fill
+                      style={{ objectFit: "cover", objectPosition: "top left" }}
+                      priority={false}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
 
-          {/* Pro Feature 2: Cloud Sync */}
-          <div className="max-w-6xl mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-16 items-center">
-              <div>
-                <div className="flex items-center gap-5 mb-6">
-                  <div className="w-14 h-14 bg-indigo-100 text-indigo-600 rounded-2xl flex items-center justify-center shrink-0">
-                    <Icons.Sync />
-                  </div>
-                  <h2 className="text-3xl font-bold text-slate-900">
-                    Cloud Sync Across Devices
-                  </h2>
+            {/* 2. SECONDARY FEATURES GRID (Không dùng ảnh Screenshot) */}
+            <div className="grid md:grid-cols-3 gap-6">
+              {/* Card 1: Cloud Sync */}
+              <div className="bg-white p-8 rounded-2xl border border-slate-200 hover:border-indigo-300 hover:shadow-lg transition group">
+                <div className="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-6  transition-transform">
+                  <Icons.Sync />
                 </div>
-                <p className="text-lg text-slate-500 leading-relaxed">
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
+                  Cloud Sync
+                </h3>
+                <p className="text-slate-500 leading-relaxed">
                   Access your workspaces, folders, and notes on all your
                   devices. Everything stays in sync and safely backed up in the
                   cloud.
                 </p>
               </div>
-              <div className="relative">
-                <div className="relative bg-white border border-slate-200 rounded-2xl shadow-xl aspect-[4/3] flex items-center justify-center text-slate-300">
-                  [Image: Sync Status Indicator / Devices]
-                </div>
-              </div>
-            </div>
-          </div>
 
-          {/* Pro Feature 3: Session History */}
-          <div className="max-w-6xl mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-16 items-center">
-              <div className="order-2 md:order-1 relative">
-                <div className="relative bg-white border border-slate-200 rounded-2xl shadow-xl aspect-[4/3] flex items-center justify-center text-slate-300">
-                  [Image: Session History Timeline]
+              {/* Card 2: Session History */}
+              <div className="bg-white p-8 rounded-2xl border border-slate-200 hover:border-purple-300 hover:shadow-lg transition group">
+                <div className="w-14 h-14 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center mb-6  transition-transform">
+                  <Icons.History />
                 </div>
-              </div>
-              <div className="order-1 md:order-2">
-                <div className="flex items-center gap-5 mb-6">
-                  <div className="w-14 h-14 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center shrink-0">
-                    <Icons.History />
-                  </div>
-                  <h2 className="text-3xl font-bold text-slate-900">
-                    Session History & Import
-                  </h2>
-                </div>
-                <p className="text-lg text-slate-500 leading-relaxed">
-                  <strong>Session Buddy Alternative:</strong> Automatically
-                  backup your open windows and restore them anytime. Plus,
-                  easily <strong>Import Bookmarks</strong> from your browser or
-                  HTML files to kickstart your organization.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Pro Feature 3: Import Browser Bookmarks */}
-          <div className="max-w-6xl mx-auto px-4">
-            <div className="grid md:grid-cols-2 gap-16 items-center">
-              <div>
-                <div className="flex items-center gap-5 mb-6">
-                  <div className="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center shrink-0">
-                    <Icons.Download />
-                  </div>
-                  <h2 className="text-3xl font-bold text-slate-900">
-                    Import Browser Bookmarks
-                  </h2>
-                </div>
-                <p className="text-lg text-slate-500 leading-relaxed">
-                  Import all your existing bookmarks into OrgaNice in one click.
-                  Keep your folder structure and start organizing instantly.
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
+                  Session History
+                </h3>
+                <p className="text-slate-500 leading-relaxed">
+                  Never lose your tabs again. We automatically save your open
+                  windows so you can restore them instantly, even after a
+                  browser crash
                 </p>
               </div>
 
-              <div className="relative">
-                <div className="relative bg-white border border-slate-200 rounded-2xl shadow-xl aspect-[4/3] flex items-center justify-center text-slate-300">
-                  [Image: Browser bookmarks → OrgaNice folders]
+              {/* Card 3: Import Bookmarks */}
+              <div className="bg-white p-8 rounded-2xl border border-slate-200 hover:border-purple-300 hover:shadow-lg transition group">
+                <div className="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center mb-6  transition-transform">
+                  <Icons.Download />
                 </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
+                  Instant Import
+                </h3>
+                <p className="text-slate-500 leading-relaxed">
+                  Moving from standard Chrome bookmarks? Import everything in
+                  seconds while keeping your existing folder structure intact.
+                </p>
               </div>
             </div>
           </div>
@@ -478,7 +459,7 @@ export default function Home() {
                   Pro Cloud
                 </h3>
                 <div className="text-4xl font-bold mb-6 text-indigo-900">
-                  $2.99{" "}
+                  $3
                   <span className="text-lg text-slate-500 font-normal">
                     /mo
                   </span>
@@ -520,7 +501,7 @@ export default function Home() {
                   Lifetime
                 </h3>
                 <div className="text-4xl font-bold mb-6 text-indigo-900">
-                  $49
+                  $60
                 </div>
                 <p className="text-slate-500 text-sm mb-8 pb-8 border-b border-indigo-100">
                   Pay once, own it forever. Includes all future Pro updates.
