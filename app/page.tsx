@@ -446,7 +446,7 @@ export default function Home() {
                   </li>
                 </ul>
                 <button className="w-full py-3.5 rounded-lg border border-slate-300 text-slate-700 font-bold hover:bg-slate-50 transition mt-auto">
-                  Install Free
+                  Free
                 </button>
               </div>
 
