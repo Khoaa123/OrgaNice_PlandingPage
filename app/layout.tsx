@@ -17,10 +17,15 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: {
     template: "%s | OrgaNice",
-    default: "OrgaNice - The Ultimate Tab Manager", // Tiêu đề mặc định
+    default: "OrgaNice - The Ultimate Tab Manager",
   },
   description:
     "Organize your browser tabs with nested folders, cloud sync, and session history.",
+
+  verification: {
+    google: "z0MzreLSSGp5wnWK2gRd904F5PmGmYbRsH7bVm4Qv1I",
+  },
+  // -------------------------
 };
 
 export default function RootLayout({
@@ -30,7 +35,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      {/* Thêm scroll-smooth để cuộn trang mượt */}
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white text-slate-800`}
       >
