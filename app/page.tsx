@@ -236,9 +236,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 2. SECONDARY FEATURES GRID */}
             <div className="grid md:grid-cols-3 gap-6">
-              {/* Card 1: Cloud Backup */}
               <div className="bg-white p-8 rounded-2xl border border-slate-200 hover:border-indigo-300 hover:shadow-lg transition group">
                 <div className="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-6  transition-transform">
                   <Icons.Shield />
