@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import { Icons } from "./components/Icons";
 import FaqSection from "./components/FaqSection";
 import Image from "next/image";
-import Hero from "@/public/hero.png";
+import Hero from "@/public/image_hero.png";
 import NestedFolder from "@/public/nestedfolder.png";
 import Header from "./components/Header";
 import { SmartPricingButton } from "./components/SmartPricingButton";
+
 // --- SEO RIÊNG CHO TRANG CHỦ ---
 export const metadata: Metadata = {
   title: "OrgaNice – Smart Tab Manager with Nested Folders",
@@ -49,17 +50,20 @@ export default function Home() {
               </span>
             </h1>
             <p className="text-xl text-slate-500 mb-10 max-w-2xl mx-auto leading-relaxed">
-              From simple tab grouping to unlimited nested folders and cloud
-              sync. OrgaNice brings order to your browser chaos.
+              From simple tab grouping to{" "}
+              <strong>unlimited nested folders</strong>. OrgaNice brings order
+              to your browser chaos.
+              <br />
+              Local features are forever free.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
-              <button className="px-8 py-3.5 bg-sky-600 text-white rounded-lg font-semibold text-lg hover:bg-sky-700 transition flex items-center justify-center cursor-pointer">
+              <button className="px-8 py-3.5 bg-sky-600 text-white rounded-lg font-semibold text-lg hover:bg-sky-700 transition flex items-center justify-center cursor-pointer shadow-lg hover:shadow-xl hover:-translate-y-0.5 transform duration-200">
                 <a
                   href="https://chromewebstore.google.com/detail/nohkfpabhnpjiijhgmaecbnnkdphahkh?utm_source=item-share-cb"
                   target="_blank"
                 >
-                  Add to Chrome - Free
+                  Add to Chrome
                 </a>
               </button>
             </div>
@@ -93,11 +97,11 @@ export default function Home() {
                 Free Core Features
               </h2>
               <h3 className="text-3xl md:text-4xl font-bold text-slate-900">
-                Everything you need to stay organized
+                Everything strictly local is Free
               </h3>
               <p className="mt-4 text-slate-500 max-w-2xl mx-auto">
-                We don't limit your ability to organize. All essential
-                management features are free.
+                We believe organization shouldn't be paywalled. Create unlimited
+                nested folders and manage tabs without limits.
               </p>
             </div>
 
@@ -108,17 +112,17 @@ export default function Home() {
                   <Icons.Layout />
                 </div>
                 <h4 className="text-xl font-bold mb-4 text-slate-900">
-                  Workspaces & Collections
+                  Unlimited Structure
                 </h4>
                 <ul className="space-y-3 text-sm text-slate-600">
                   <li className="flex gap-2">
-                    <Icons.Check /> Unlimited Workspaces
+                    <Icons.Check /> <strong>Unlimited Workspaces</strong>
+                  </li>
+                  <li className="flex gap-2">
+                    <Icons.Check /> <strong>Unlimited Nested Folders</strong>
                   </li>
                   <li className="flex gap-2">
                     <Icons.Check /> Group tabs into Collections
-                  </li>
-                  <li className="flex gap-2">
-                    <Icons.Check /> Pin important items
                   </li>
                   <li className="flex gap-2">
                     <Icons.Check /> Auto-close after saving
@@ -169,7 +173,7 @@ export default function Home() {
                     <Icons.Check /> Global search
                   </li>
                   <li className="flex gap-2">
-                    <Icons.Check /> Import from Toby
+                    <Icons.Check /> Import from Toby / HTML
                   </li>
                 </ul>
               </div>
@@ -186,41 +190,43 @@ export default function Home() {
             {/* Header */}
             <div className="text-center mb-20">
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900">
-                Upgrade for Ultimate Power
+                Upgrade for Cloud & Security
               </h2>
               <p className="mt-4 text-slate-500 text-lg">
-                Take your productivity to the next level with OrgaNice Pro.
+                Unlock cross-device sync and data recovery with OrgaNice Pro.
               </p>
             </div>
 
-            {/* 1. HERO FEATURE: NESTED FOLDERS (Giữ lại ảnh vì bạn đã có) */}
+            {/* 1. HERO FEATURE: CLOUD SYNC */}
             <div className="mb-24">
               <div className="grid md:grid-cols-2 gap-12 items-center">
                 {/* Text Side */}
                 <div className="order-2 md:order-1">
                   <div className="flex items-center gap-4 mb-6">
                     <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center shrink-0">
-                      <Icons.Folder />
+                      <Icons.Sync />
                     </div>
                     <h3 className="text-2xl md:text-3xl font-bold text-slate-900">
-                      Unlimited Nested Folders
+                      Cloud Sync
                     </h3>
                   </div>
                   <p className="text-lg text-slate-600 leading-relaxed mb-6">
-                    Break free from flat lists. Organize your work with{" "}
-                    <strong>folders inside folders</strong>, without any depth
-                    limits. Perfect for large projects, long-term research, and
-                    complex workflows.
+                    Keep your work flowing seamlessly between your office
+                    Laptop, home PC, and other devices.
+                    <br />
+                    <br />
+                    Your <strong>Nested Folders</strong>, Collections, and Notes
+                    are automatically synced in real-time. Never manually
+                    export/import again.
                   </p>
                 </div>
 
-                {/* Image Side */}
+                {/* Image Side - Dùng lại ảnh cũ nhưng minh họa cho Sync context */}
                 <div className="order-1 md:order-2 relative">
                   <div className="relative rounded-2xl shadow-2xl shadow-slate-200 w-full h-[400px] md:h-[500px] overflow-hidden border border-slate-200 bg-white">
-                    {/* Lưu ý: Đảm bảo đường dẫn ảnh đúng */}
                     <Image
                       src={NestedFolder}
-                      alt="Tree View with deeply nested folders"
+                      alt="OrgaNice Sync Interface"
                       fill
                       style={{ objectFit: "cover", objectPosition: "top left" }}
                       priority={false}
@@ -230,49 +236,48 @@ export default function Home() {
               </div>
             </div>
 
-            {/* 2. SECONDARY FEATURES GRID (Không dùng ảnh Screenshot) */}
+            {/* 2. SECONDARY FEATURES GRID */}
             <div className="grid md:grid-cols-3 gap-6">
-              {/* Card 1: Cloud Sync */}
+              {/* Card 1: Cloud Backup */}
               <div className="bg-white p-8 rounded-2xl border border-slate-200 hover:border-indigo-300 hover:shadow-lg transition group">
                 <div className="w-14 h-14 bg-indigo-50 text-indigo-600 rounded-xl flex items-center justify-center mb-6  transition-transform">
-                  <Icons.Sync />
+                  <Icons.Shield />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">
-                  Cloud Sync
+                  Secure Cloud Backup
                 </h3>
                 <p className="text-slate-500 leading-relaxed">
-                  Access your workspaces, folders, and notes on all your
-                  devices. Everything stays in sync and safely backed up in the
-                  cloud.
+                  Never lose your setup. We automatically backup your Workspaces
+                  & Collections to the cloud, ensuring your data survives
+                  hardware failures or browser resets.
                 </p>
               </div>
 
-              {/* Card 2: Session History */}
+              {/* Card 2: Trash Bin */}
               <div className="bg-white p-8 rounded-2xl border border-slate-200 hover:border-purple-300 hover:shadow-lg transition group">
                 <div className="w-14 h-14 bg-purple-50 text-purple-600 rounded-xl flex items-center justify-center mb-6  transition-transform">
-                  <Icons.History />
+                  <Icons.Trash />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">
-                  Session History
+                  Cloud Trash Bin
                 </h3>
                 <p className="text-slate-500 leading-relaxed">
-                  Never lose your tabs again. We automatically save your open
-                  windows so you can restore them instantly, even after a
-                  browser crash
+                  Deleted something by accident? Pro members can restore deleted
+                  collections and folders from the cloud trash bin.
                 </p>
               </div>
 
-              {/* Card 3: Import Bookmarks */}
+              {/* Card 3: Support */}
               <div className="bg-white p-8 rounded-2xl border border-slate-200 hover:border-purple-300 hover:shadow-lg transition group">
                 <div className="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center mb-6  transition-transform">
-                  <Icons.Download />
+                  <Icons.Support />
                 </div>
                 <h3 className="text-xl font-bold text-slate-900 mb-3">
-                  Instant Import
+                  Priority Support
                 </h3>
                 <p className="text-slate-500 leading-relaxed">
-                  Moving from standard Chrome bookmarks? Import everything in
-                  seconds while keeping your existing folder structure intact.
+                  Get direct access to the developer for feature requests and
+                  faster troubleshooting assistance.
                 </p>
               </div>
             </div>
@@ -301,6 +306,7 @@ export default function Home() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-slate-100 text-sm text-slate-600">
+                  {/* --- BASIC MANAGEMENT --- */}
                   <tr>
                     <td className="p-4 pl-6 border-r border-slate-200 ">
                       Add/Edit/Delete Workspaces
@@ -324,14 +330,14 @@ export default function Home() {
                     </td>
                   </tr>
                   <tr>
-                    <td className="p-4 pl-6 border-r border-slate-200 ">
-                      Quick Notes/Collection Notes/Tab Notes
+                    <td className="p-4 pl-6 font-medium text-slate-900 border-r border-slate-200 ">
+                      Nested Folders
                     </td>
-                    <td className="p-4 border-r border-slate-200">
-                      <TableCheck />
+                    <td className="p-4 text-center font-bold text-indigo-600 border-r border-slate-200">
+                      Unlimited
                     </td>
-                    <td className="p-4 bg-indigo-50/30">
-                      <TableCheck />
+                    <td className="p-4 bg-indigo-50/30 font-bold text-indigo-700 text-center">
+                      Unlimited
                     </td>
                   </tr>
                   <tr>
@@ -345,9 +351,11 @@ export default function Home() {
                       <TableCheck />
                     </td>
                   </tr>
+
+                  {/* --- IMPORT FEATURES (Mới bổ sung chi tiết) --- */}
                   <tr>
                     <td className="p-4 pl-6 border-r border-slate-200 ">
-                      Import from Toby Extension
+                      Import from Toby (JSON)
                     </td>
                     <td className="p-4 border-r border-slate-200">
                       <TableCheck />
@@ -356,18 +364,30 @@ export default function Home() {
                       <TableCheck />
                     </td>
                   </tr>
-                  {/* Pro Features */}
                   <tr>
-                    <td className="p-4 pl-6 font-medium text-slate-900 border-r border-slate-200 ">
-                      Nested Folders
+                    <td className="p-4 pl-6 border-r border-slate-200 ">
+                      Import from HTML File
                     </td>
-                    <td className="p-4 text-center text-xs font-bold text-slate-500 border-r border-slate-200">
-                      Max 15 Folders
+                    <td className="p-4 border-r border-slate-200">
+                      <TableCheck />
                     </td>
-                    <td className="p-4 bg-indigo-50/30 font-bold text-indigo-700 text-center">
-                      Unlimited
+                    <td className="p-4 bg-indigo-50/30">
+                      <TableCheck />
                     </td>
                   </tr>
+                  <tr>
+                    <td className="p-4 pl-6 border-r border-slate-200 ">
+                      Import from Chrome Bookmarks
+                    </td>
+                    <td className="p-4 border-r border-slate-200">
+                      <TableCheck />
+                    </td>
+                    <td className="p-4 bg-indigo-50/30">
+                      <TableCheck />
+                    </td>
+                  </tr>
+
+                  {/* --- PRO FEATURES --- */}
                   <tr>
                     <td className="p-4 pl-6 font-medium text-slate-900 border-r border-slate-200 ">
                       Cloud Sync (Multi-device)
@@ -381,18 +401,7 @@ export default function Home() {
                   </tr>
                   <tr>
                     <td className="p-4 pl-6 font-medium text-slate-900 border-r border-slate-200 ">
-                      Session History Backup
-                    </td>
-                    <td className="p-4 border-r border-slate-200">
-                      <TableCross />
-                    </td>
-                    <td className="p-4 bg-indigo-50/30">
-                      <TableCheck />
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="p-4 pl-6 font-medium text-slate-900 border-r border-slate-200 ">
-                      Import Browser Bookmarks
+                      Cloud Trash Bin (Recovery)
                     </td>
                     <td className="p-4 border-r border-slate-200">
                       <TableCross />
@@ -412,10 +421,11 @@ export default function Home() {
           <div className="max-w-6xl mx-auto px-4 text-center">
             <h2 className="text-3xl font-bold mb-6">Choose Your Plan</h2>
             <p className="text-slate-500 mb-16 text-lg">
-              Start for free. Upgrade for the full experience.
+              Start for free with no limits on local organization. <br />{" "}
+              Upgrade to Sync across devices.
             </p>
 
-            <div className="grid md:grid-cols-3 gap-6 text-left">
+            <div className="grid md:grid-cols-2 gap-6 text-left">
               {/* 1. Free Plan */}
               <div className="p-8 rounded-2xl border border-slate-200 bg-white hover:border-slate-300 transition flex flex-col h-full">
                 <h3 className="font-bold text-xl mb-2 text-slate-900">
@@ -423,11 +433,14 @@ export default function Home() {
                 </h3>
                 <div className="text-4xl font-bold mb-6">Free</div>
                 <p className="text-slate-500 text-sm mb-8 pb-8 border-b border-slate-100">
-                  Perfect for organizing your local browser workspace.
+                  Full featured for single-device use. No limits.
                 </p>
                 <ul className="space-y-4 mb-8 flex-1">
                   <li className="flex gap-3 text-slate-700 text-sm">
                     <Icons.Check /> Unlimited Workspaces & Tabs
+                  </li>
+                  <li className="flex gap-3 text-slate-700 text-sm font-semibold">
+                    <Icons.Check /> Unlimited Nested Folders
                   </li>
                   <li className="flex gap-3 text-slate-700 text-sm">
                     <Icons.Check /> Drag & Drop / Pinning
@@ -436,60 +449,12 @@ export default function Home() {
                     <Icons.Check /> Notes & Search
                   </li>
                   <li className="flex gap-3 text-slate-700 text-sm">
-                    <Icons.Check /> Import from Toby
-                  </li>
-                  <li className="flex gap-3 text-slate-700 text-sm">
-                    <Icons.Check /> Instant Cleanup
-                  </li>
-                  <li className="flex gap-3 text-slate-700 text-sm">
-                    <Icons.Check /> Nested Folders (Max 15)
+                    <Icons.Check /> Import from Toby / HTML
                   </li>
                 </ul>
                 <button className="w-full py-3.5 rounded-lg border border-slate-300 text-slate-700 font-bold hover:bg-slate-50 transition mt-auto">
-                  Free
+                  Installed
                 </button>
-              </div>
-
-              {/* 2. Pro Plan (Balanced View) */}
-              <div className="p-8 rounded-2xl border border-slate-200 bg-white hover:border-indigo-300 overflow-hidden transition flex flex-col h-full relative">
-                <div className="absolute top-0 right-0 bg-indigo-100 text-indigo-700 text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
-                  SUBSCRIPTION
-                </div>
-                <h3 className="font-bold text-xl mb-2 text-indigo-700">
-                  Pro Cloud
-                </h3>
-                <div className="text-4xl font-bold mb-6 text-indigo-900">
-                  $3
-                  <span className="text-lg text-slate-500 font-normal">
-                    /mo
-                  </span>
-                </div>
-                <p className="text-slate-500 text-sm mb-8 pb-8 border-b border-indigo-100">
-                  Billed yearly. Unlock sync and unlimited power.
-                </p>
-                <ul className="space-y-4 mb-8 flex-1">
-                  <li className="flex gap-3 text-slate-700 text-sm">
-                    <Icons.Check /> <strong>Cloud Sync Devices</strong>
-                  </li>
-                  <li className="flex gap-3 text-slate-700 text-sm">
-                    <Icons.Check /> <strong>Unlimited Nested Folders</strong>
-                  </li>
-                  <li className="flex gap-3 text-slate-700 text-sm">
-                    <Icons.Check /> Session History Backup
-                  </li>
-                  <li className="flex gap-3 text-slate-700 text-sm">
-                    <Icons.Check /> Import Browser Bookmarks
-                  </li>
-                  <li className="flex gap-3 text-slate-700 text-sm">
-                    <Icons.Check /> Trash Bin & Recovery
-                  </li>
-                  <li className="flex gap-3 text-slate-700 text-sm">
-                    <Icons.Check /> Priority Support
-                  </li>
-                </ul>
-                <SmartPricingButton className="w-full py-3.5 rounded-lg bg-indigo-600 text-white font-bold hover:bg-indigo-700 transition shadow-sm mt-auto">
-                  UPGRADE
-                </SmartPricingButton>
               </div>
 
               {/* 3. Lifetime Plan */}
@@ -501,21 +466,25 @@ export default function Home() {
                   Lifetime
                 </h3>
                 <div className="text-4xl font-bold mb-6 text-indigo-900">
-                  $60
+                  $19
                 </div>
                 <p className="text-slate-500 text-sm mb-8 pb-8 border-b border-indigo-100">
-                  Pay once, own it forever. Includes all future Pro updates.
+                  Pay once, own it forever
                 </p>
                 <ul className="space-y-4 mb-8 flex-1">
                   <li className="flex gap-3 text-slate-700 text-sm">
-                    <Icons.Check /> <strong>Everything in Pro</strong>
+                    <Icons.Check /> <strong>Sync Across Devices</strong>
+                  </li>
+                  <li className="flex gap-3 text-slate-700 text-sm">
+                    <Icons.Check /> <strong>Secure Cloud Backup</strong>
+                  </li>
+                  <li className="flex gap-3 text-slate-700 text-sm">
+                    <Icons.Check /> <strong>Cloud Trash Bin</strong>
                   </li>
                   <li className="flex gap-3 text-slate-700 text-sm">
                     <Icons.Check /> No recurring fees
                   </li>
-                  <li className="flex gap-3 text-slate-700 text-sm">
-                    <Icons.Check /> Early access to beta features
-                  </li>
+
                   <li className="flex gap-3 text-slate-700 text-sm">
                     <Icons.Check /> Support Indie Development
                   </li>
