@@ -152,7 +152,7 @@ export default function Home() {
                     <Icons.Check /> Save all tabs in one click
                   </li>
                   <li className="flex gap-2">
-                    <Icons.Check /> Remove Duplicates
+                    <Icons.Check /> Remove duplicates
                   </li>
                   <li className="flex gap-2">
                     <Icons.Check /> Drag & drop anywhere
