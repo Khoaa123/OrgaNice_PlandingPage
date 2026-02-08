@@ -17,6 +17,8 @@ export const metadata: Metadata = {
     "productivity",
     "browser extension",
     "nested folders",
+    "tab hibernation",
+    "deduplicate tabs",
   ],
 };
 
@@ -43,6 +45,13 @@ export default function Home() {
         {/* --- HERO SECTION --- */}
         <section className="pt-32 pb-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs font-bold mb-8 uppercase tracking-wide shadow-sm animate-fade-in-up">
+              <span className="relative flex h-2 w-2">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+              </span>
+              New in v1.1.3: Tab Hibernation & Deduplication
+            </div>
             <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
               The ultimate tab manager <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">
@@ -143,6 +152,9 @@ export default function Home() {
                     <Icons.Check /> Save all tabs in one click
                   </li>
                   <li className="flex gap-2">
+                    <Icons.Check /> Remove Duplicates
+                  </li>
+                  <li className="flex gap-2">
                     <Icons.Check /> Drag & drop anywhere
                   </li>
                   <li className="flex gap-2">
@@ -160,9 +172,12 @@ export default function Home() {
                   <Icons.Edit />
                 </div>
                 <h4 className="text-xl font-bold mb-4 text-slate-900">
-                  Notes & Utilities
+                  Smart Utilities
                 </h4>
                 <ul className="space-y-3 text-sm text-slate-600">
+                  <li className="flex gap-2">
+                    <Icons.Check /> Tab hibernation
+                  </li>
                   <li className="flex gap-2">
                     <Icons.Check /> Quick notes dashboard
                   </li>
@@ -340,6 +355,28 @@ export default function Home() {
                   </tr>
                   <tr>
                     <td className="p-4 pl-6 border-r border-slate-200 ">
+                      Tab Hibernation
+                    </td>
+                    <td className="p-4 border-r border-slate-200">
+                      <TableCheck />
+                    </td>
+                    <td className="p-4 bg-indigo-50/30">
+                      <TableCheck />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-4 pl-6 border-r border-slate-200 ">
+                      Remove Duplicate Tabs
+                    </td>
+                    <td className="p-4 border-r border-slate-200">
+                      <TableCheck />
+                    </td>
+                    <td className="p-4 bg-indigo-50/30">
+                      <TableCheck />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-4 pl-6 border-r border-slate-200 ">
                       Pinning & Drag-Drop
                     </td>
                     <td className="p-4 border-r border-slate-200">
@@ -439,6 +476,9 @@ export default function Home() {
                   </li>
                   <li className="flex gap-3 text-slate-700 text-sm font-semibold">
                     <Icons.Check /> Unlimited Nested Folders
+                  </li>
+                  <li className="flex gap-3 text-slate-700 text-sm">
+                    <Icons.Check /> Hibernate Tabs & Deduplicate
                   </li>
                   <li className="flex gap-3 text-slate-700 text-sm">
                     <Icons.Check /> Drag & Drop / Pinning
