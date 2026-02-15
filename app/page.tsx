@@ -5,6 +5,7 @@ import Image from "next/image";
 import Hero from "@/public/image_hero.png";
 import NestedFolder from "@/public/nestedfolder.png";
 import Header from "./components/Header";
+import Hybird from "@/public/sidepanel.png";
 import { SmartPricingButton } from "./components/SmartPricingButton";
 
 // --- SEO RIÊNG CHO TRANG CHỦ ---
@@ -19,6 +20,8 @@ export const metadata: Metadata = {
     "nested folders",
     "tab hibernation",
     "deduplicate tabs",
+    "vertical tabs",
+    "hybrid mode",
   ],
 };
 
@@ -50,7 +53,7 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
               </span>
-              New in v1.1.3: Tab Hibernation & Deduplication
+              New in v1.1.4: Export Data, Vertical Tabs & Flexible New Tab Mode
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
               The ultimate tab manager <br />
@@ -60,10 +63,10 @@ export default function Home() {
             </h1>
             <p className="text-xl text-slate-500 mb-10 max-w-2xl mx-auto leading-relaxed">
               From simple tab grouping to{" "}
-              <strong>unlimited nested folders</strong>. OrgaNice brings order
-              to your browser chaos.
+              <strong>unlimited nested folders</strong>. OrgaNice helps you
+              organize and find your tabs faster
               <br />
-              Local features are forever free.
+              All local features are free forever.
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
@@ -136,6 +139,9 @@ export default function Home() {
                   <li className="flex gap-2">
                     <Icons.Check /> Auto-close after saving
                   </li>
+                  <li className="flex gap-2">
+                    <Icons.Check /> Full Data Export (JSON)
+                  </li>
                 </ul>
               </div>
 
@@ -145,7 +151,7 @@ export default function Home() {
                   <Icons.Move />
                 </div>
                 <h4 className="text-xl font-bold mb-4 text-slate-900">
-                  Fast Tab Actions
+                  Powerful Access
                 </h4>
                 <ul className="space-y-3 text-sm text-slate-600">
                   <li className="flex gap-2">
@@ -162,6 +168,12 @@ export default function Home() {
                   </li>
                   <li className="flex gap-2">
                     <Icons.Check /> Add tabs from toolbar
+                  </li>
+                  <li className="flex gap-2">
+                    <Icons.Check /> Vertical Tab Side Panel
+                  </li>
+                  <li className="flex gap-2">
+                    <Icons.Check /> Flexible New Tab Mode
                   </li>
                 </ul>
               </div>
@@ -196,7 +208,63 @@ export default function Home() {
           </div>
         </section>
 
-        {/* --- SECTION 2: PRO FEATURES --- */}
+        <section className="py-24 bg-slate-50 border-y border-slate-200 overflow-hidden">
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="grid md:grid-cols-12 gap-16 items-center">
+              <div className="relative col-span-7 rounded-2xl overflow-hidden shadow-2xl border border-slate-300 bg-white order-2 md:order-1">
+                <Image
+                  src={Hybird}
+                  alt="OrgaNice Side Panel Interface"
+                  className="w-full h-auto"
+                />
+              </div>
+
+              <div className="order-1 col-span-5 md:order-2">
+                <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-900">
+                  Use OrgaNice with any <br />
+                  New Tab extension.
+                </h2>
+
+                <p className="text-lg text-slate-600 mb-6 leading-relaxed">
+                  You don’t need to remove your favorite New Tab extension.
+                  OrgaNice <strong>doesn’t</strong> require overriding your New
+                  Tab page.
+                </p>
+
+                <p className="text-lg text-slate-600 mb-8 leading-relaxed">
+                  Simply disable the New Tab override in settings and manage
+                  everything from the <strong>Side Panel</strong>. OrgaNice
+                  works alongside other extensions smoothly — no conflicts, no
+                  forced replacement.
+                </p>
+
+                <div className="space-y-4">
+                  <div className="flex items-center gap-3 text-slate-700 font-medium">
+                    <div className="w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0">
+                      <Icons.Check />
+                    </div>
+                    No need to uninstall any extension
+                  </div>
+
+                  <div className="flex items-center gap-3 text-slate-700 font-medium">
+                    <div className="w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0">
+                      <Icons.Check />
+                    </div>
+                    Works perfectly with other New Tab tools
+                  </div>
+
+                  <div className="flex items-center gap-3 text-slate-700 font-medium">
+                    <div className="w-6 h-6 rounded-full bg-indigo-100 text-indigo-600 flex items-center justify-center shrink-0">
+                      <Icons.Check />
+                    </div>
+                    Full control from the Vertical Side Panel
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section
           id="pro-features"
           className="py-24 space-y-32 bg-slate-50 border-y border-slate-200"
@@ -227,7 +295,7 @@ export default function Home() {
                   </div>
                   <p className="text-lg text-slate-600 leading-relaxed mb-6">
                     Keep your work flowing seamlessly between your office
-                    Laptop, home PC, and other devices.
+                    laptop, home PC, and other devices.
                     <br />
                     <br />
                     Your <strong>Nested Folders</strong>, Collections, and Notes
@@ -322,7 +390,7 @@ export default function Home() {
                   {/* --- BASIC MANAGEMENT --- */}
                   <tr>
                     <td className="p-4 pl-6 border-r border-slate-200 ">
-                      Add/Edit/Delete Workspaces
+                      Add/Edit/Delete workspaces
                     </td>
                     <td className="p-4 border-r border-slate-200">
                       <TableCheck />
@@ -333,7 +401,7 @@ export default function Home() {
                   </tr>
                   <tr>
                     <td className="p-4 pl-6 border-r border-slate-200 ">
-                      Add/Edit/Delete Collections
+                      Add/Edit/Delete collections
                     </td>
                     <td className="p-4 border-r border-slate-200">
                       <TableCheck />
@@ -344,7 +412,7 @@ export default function Home() {
                   </tr>
                   <tr>
                     <td className="p-4 pl-6 font-medium text-slate-900 border-r border-slate-200 ">
-                      Nested Folders
+                      Nested folders
                     </td>
                     <td className="p-4 text-center font-bold text-indigo-600 border-r border-slate-200">
                       Unlimited
@@ -355,7 +423,7 @@ export default function Home() {
                   </tr>
                   <tr>
                     <td className="p-4 pl-6 border-r border-slate-200 ">
-                      Tab Hibernation
+                      Tab hibernation
                     </td>
                     <td className="p-4 border-r border-slate-200">
                       <TableCheck />
@@ -366,7 +434,7 @@ export default function Home() {
                   </tr>
                   <tr>
                     <td className="p-4 pl-6 border-r border-slate-200 ">
-                      Remove Duplicate Tabs
+                      Remove duplicate tabs
                     </td>
                     <td className="p-4 border-r border-slate-200">
                       <TableCheck />
@@ -422,10 +490,46 @@ export default function Home() {
                     </td>
                   </tr>
 
+                  <tr>
+                    <td className="p-4 pl-6 border-r border-slate-200 ">
+                      Export data JSON
+                    </td>
+                    <td className="p-4 border-r border-slate-200">
+                      <TableCheck />
+                    </td>
+                    <td className="p-4 bg-indigo-50/30">
+                      <TableCheck />
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td className="p-4 pl-6 border-r border-slate-200 ">
+                      Vertical tabs
+                    </td>
+                    <td className="p-4 border-r border-slate-200">
+                      <TableCheck />
+                    </td>
+                    <td className="p-4 bg-indigo-50/30">
+                      <TableCheck />
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td className="p-4 pl-6 border-r border-slate-200 ">
+                      Flexible new tab mode
+                    </td>
+                    <td className="p-4 border-r border-slate-200">
+                      <TableCheck />
+                    </td>
+                    <td className="p-4 bg-indigo-50/30">
+                      <TableCheck />
+                    </td>
+                  </tr>
+
                   {/* --- PRO FEATURES --- */}
                   <tr>
                     <td className="p-4 pl-6 font-medium text-slate-900 border-r border-slate-200 ">
-                      Cloud Sync (Multi-device)
+                      Cloud sync (Multi-device)
                     </td>
                     <td className="p-4 border-r border-slate-200">
                       <TableCross />
@@ -436,7 +540,7 @@ export default function Home() {
                   </tr>
                   <tr>
                     <td className="p-4 pl-6 font-medium text-slate-900 border-r border-slate-200 ">
-                      Cloud Trash Bin (Recovery)
+                      Cloud trash bin (Recovery)
                     </td>
                     <td className="p-4 border-r border-slate-200">
                       <TableCross />
@@ -478,16 +582,13 @@ export default function Home() {
                     <Icons.Check /> Unlimited Nested Folders
                   </li>
                   <li className="flex gap-3 text-slate-700 text-sm">
+                    <Icons.Check /> <strong>Vertical Sidebar Mode</strong>
+                  </li>
+                  <li className="flex gap-3 text-slate-700 text-sm">
                     <Icons.Check /> Hibernate Tabs & Deduplicate
                   </li>
                   <li className="flex gap-3 text-slate-700 text-sm">
-                    <Icons.Check /> Drag & Drop / Pinning
-                  </li>
-                  <li className="flex gap-3 text-slate-700 text-sm">
-                    <Icons.Check /> Notes & Search
-                  </li>
-                  <li className="flex gap-3 text-slate-700 text-sm">
-                    <Icons.Check /> Import from Toby / HTML
+                    <Icons.Check /> <strong>Full Data Export (JSON)</strong>
                   </li>
                 </ul>
                 <button className="w-full py-3.5 rounded-lg border border-slate-300 text-slate-700 font-bold hover:bg-slate-50 transition mt-auto">
