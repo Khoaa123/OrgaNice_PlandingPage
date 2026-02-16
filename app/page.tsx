@@ -10,7 +10,7 @@ import { SmartPricingButton } from "./components/SmartPricingButton";
 
 // --- SEO RIÊNG CHO TRANG CHỦ ---
 export const metadata: Metadata = {
-  title: "OrgaNice – Smart Tab Manager with Nested Folders",
+  title: "OrgaNice – Tab Manager with Nested Folders",
   description:
     "Stop tab chaos. Organize browser tabs with nested folders, cloud sync, and quick notes. The minimalist alternative to OneTab and Session Buddy.",
   keywords: [
@@ -53,7 +53,8 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
               </span>
-              New in v1.1.4: Export Data, Vertical Tabs & Flexible New Tab Mode
+              New in v1.1.5: Workspace Rail, Vertical Tabs & Flexible New Tab
+              Mode
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
               The ultimate tab manager <br />
