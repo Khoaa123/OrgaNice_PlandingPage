@@ -53,8 +53,8 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
               </span>
-              New in v1.1.5: Workspace Rail, Vertical Tabs & Flexible New Tab
-              Mode
+              New in v1.1.6: Drag & Drop Everywhere, Context Menus & Cloud Sync
+              Toggle
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
               The ultimate tab manager <br />
@@ -93,7 +93,7 @@ export default function Home() {
                 src={Hero}
                 alt="App Screenshot"
                 width={1200}
-                height={750} // hoặc đúng tỷ lệ ảnh của bạn
+                height={750}
                 style={{ objectFit: "cover" }}
                 className="w-full h-auto"
                 priority
@@ -129,19 +129,19 @@ export default function Home() {
                 </h4>
                 <ul className="space-y-3 text-sm text-slate-600">
                   <li className="flex gap-2">
-                    <Icons.Check /> <strong>Unlimited Workspaces</strong>
+                    <Icons.Check /> <strong>Unlimited workspaces</strong>
                   </li>
                   <li className="flex gap-2">
-                    <Icons.Check /> <strong>Unlimited Nested Folders</strong>
+                    <Icons.Check /> <strong>Unlimited nested folders</strong>
                   </li>
                   <li className="flex gap-2">
-                    <Icons.Check /> Group tabs into Collections
+                    <Icons.Check /> Group tabs into collections
                   </li>
                   <li className="flex gap-2">
                     <Icons.Check /> Auto-close after saving
                   </li>
                   <li className="flex gap-2">
-                    <Icons.Check /> Full Data Export (JSON)
+                    <Icons.Check /> Full data export (JSON)
                   </li>
                 </ul>
               </div>
@@ -171,10 +171,10 @@ export default function Home() {
                     <Icons.Check /> Add tabs from toolbar
                   </li>
                   <li className="flex gap-2">
-                    <Icons.Check /> Vertical Tab Side Panel
+                    <Icons.Check /> Vertical tab side panel
                   </li>
                   <li className="flex gap-2">
-                    <Icons.Check /> Flexible New Tab Mode
+                    <Icons.Check /> Workspace & tab context menus
                   </li>
                 </ul>
               </div>
@@ -199,6 +199,9 @@ export default function Home() {
                   </li>
                   <li className="flex gap-2">
                     <Icons.Check /> Global search
+                  </li>
+                  <li className="flex gap-2">
+                    <Icons.Check /> Flexible new tab mode
                   </li>
                   <li className="flex gap-2">
                     <Icons.Check /> Import from Toby / HTML
@@ -302,6 +305,13 @@ export default function Home() {
                     Your <strong>Nested Folders</strong>, Collections, and Notes
                     are automatically synced in real-time. Never manually
                     export/import again.
+                    <br />
+                    <br />
+                    <span className="inline-block bg-indigo-50 text-indigo-800 px-3 py-1.5 rounded-lg text-sm font-medium border border-indigo-100 mt-2">
+                      ✨ <strong>New in v1.1.6:</strong> Cloud Sync is now
+                      completely optional. Turn it off anytime for a strict
+                      local-only experience.
+                    </span>
                   </p>
                 </div>
 
@@ -444,9 +454,21 @@ export default function Home() {
                       <TableCheck />
                     </td>
                   </tr>
+                  {/* UPDATED: Enhanced Drag & Drop + Context Menus */}
                   <tr>
                     <td className="p-4 pl-6 border-r border-slate-200 ">
-                      Pinning & Drag-Drop
+                      Drag & drop everywhere
+                    </td>
+                    <td className="p-4 border-r border-slate-200">
+                      <TableCheck />
+                    </td>
+                    <td className="p-4 bg-indigo-50/30">
+                      <TableCheck />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-4 pl-6 border-r border-slate-200 ">
+                      Workspace & tab context menus
                     </td>
                     <td className="p-4 border-r border-slate-200">
                       <TableCheck />
@@ -456,7 +478,6 @@ export default function Home() {
                     </td>
                   </tr>
 
-                  {/* --- IMPORT FEATURES (Mới bổ sung chi tiết) --- */}
                   <tr>
                     <td className="p-4 pl-6 border-r border-slate-200 ">
                       Import from Toby (JSON)
@@ -539,6 +560,18 @@ export default function Home() {
                       <TableCheck />
                     </td>
                   </tr>
+                  {/* UPDATED: Toggle Cloud Sync Row */}
+                  <tr>
+                    <td className="p-4 pl-6 font-medium text-slate-900 border-r border-slate-200 ">
+                      Toggle cloud sync ON/OFF
+                    </td>
+                    <td className="p-4 border-r border-slate-200">
+                      <TableCross />
+                    </td>
+                    <td className="p-4 bg-indigo-50/30">
+                      <TableCheck />
+                    </td>
+                  </tr>
                   <tr>
                     <td className="p-4 pl-6 font-medium text-slate-900 border-r border-slate-200 ">
                       Cloud trash bin (Recovery)
@@ -579,17 +612,17 @@ export default function Home() {
                   <li className="flex gap-3 text-slate-700 text-sm">
                     <Icons.Check /> Unlimited Workspaces & Tabs
                   </li>
-                  <li className="flex gap-3 text-slate-700 text-sm font-semibold">
+                  <li className="flex gap-3 text-slate-700 text-sm">
                     <Icons.Check /> Unlimited Nested Folders
                   </li>
                   <li className="flex gap-3 text-slate-700 text-sm">
-                    <Icons.Check /> <strong>Vertical Sidebar Mode</strong>
+                    <Icons.Check /> Vertical Sidebar Mode
                   </li>
                   <li className="flex gap-3 text-slate-700 text-sm">
                     <Icons.Check /> Hibernate Tabs & Deduplicate
                   </li>
                   <li className="flex gap-3 text-slate-700 text-sm">
-                    <Icons.Check /> <strong>Full Data Export (JSON)</strong>
+                    <Icons.Check /> Full Data Export (JSON)
                   </li>
                 </ul>
                 <button className="w-full py-3.5 rounded-lg border border-slate-300 text-slate-700 font-bold hover:bg-slate-50 transition mt-auto">
@@ -614,6 +647,10 @@ export default function Home() {
                 <ul className="space-y-4 mb-8 flex-1">
                   <li className="flex gap-3 text-slate-700 text-sm">
                     <Icons.Check /> <strong>Sync Across Devices</strong>
+                  </li>
+                  <li className="flex gap-3 text-slate-700 text-sm">
+                    <Icons.Check />
+                    <strong>Optional Sync (Toggle On/Off)</strong>
                   </li>
                   <li className="flex gap-3 text-slate-700 text-sm">
                     <Icons.Check /> <strong>Secure Cloud Backup</strong>
