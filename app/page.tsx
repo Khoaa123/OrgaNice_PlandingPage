@@ -53,8 +53,8 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
               </span>
-              New in v1.1.6: Drag & Drop Everywhere, Context Menus & Cloud Sync
-              Toggle
+              New in v1.1.7: Drag & Drop Everywhere, Cloud Sync & Smarter
+              Workflow
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
               The ultimate tab manager <br />
