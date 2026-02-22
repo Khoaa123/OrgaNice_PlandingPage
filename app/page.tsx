@@ -48,13 +48,12 @@ export default function Home() {
         {/* --- HERO SECTION --- */}
         <section className="pt-32 pb-20 px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-xs font-bold mb-8 uppercase tracking-wide shadow-sm animate-fade-in-up">
-              <span className="relative flex h-2 w-2">
+            <div className="inline-flex items-center gap-2.5 px-5 py-2 rounded-full bg-indigo-50 border border-indigo-100 text-indigo-700 text-sm font-bold mb-8 uppercase tracking-wide shadow-sm animate-fade-in-up">
+              <span className="relative flex h-2.5 w-2.5">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-indigo-500"></span>
               </span>
-              New in v1.1.7: Drag & Drop Everywhere, Cloud Sync & Smarter
-              Workflow
+              New in v1.1.8: Drag & Drop Everywhere & Simplified UI
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
               The ultimate tab manager <br />
