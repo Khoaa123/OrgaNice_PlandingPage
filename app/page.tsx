@@ -22,6 +22,7 @@ export const metadata: Metadata = {
     "deduplicate tabs",
     "vertical tabs",
     "hybrid mode",
+    "dark mode",
   ],
 };
 
@@ -53,7 +54,7 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-indigo-500"></span>
               </span>
-              New in v1.1.8: Drag & Drop Everywhere & Simplified UI
+              New in v1.1.9: Dark Mode Theme & Optional Full URL Display
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
               The ultimate tab manager <br />
@@ -187,6 +188,9 @@ export default function Home() {
                   Smart Utilities
                 </h4>
                 <ul className="space-y-3 text-sm text-slate-600">
+                  <li className="flex gap-2">
+                    <Icons.Check /> Dark Mode Theme
+                  </li>
                   <li className="flex gap-2">
                     <Icons.Check /> Tab hibernation
                   </li>
@@ -433,6 +437,17 @@ export default function Home() {
                   </tr>
                   <tr>
                     <td className="p-4 pl-6 border-r border-slate-200 ">
+                      Dark Mode Theme
+                    </td>
+                    <td className="p-4 border-r border-slate-200">
+                      <TableCheck />
+                    </td>
+                    <td className="p-4 bg-indigo-50/30">
+                      <TableCheck />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-4 pl-6 border-r border-slate-200 ">
                       Tab hibernation
                     </td>
                     <td className="p-4 border-r border-slate-200">
@@ -453,7 +468,6 @@ export default function Home() {
                       <TableCheck />
                     </td>
                   </tr>
-                  {/* UPDATED: Enhanced Drag & Drop + Context Menus */}
                   <tr>
                     <td className="p-4 pl-6 border-r border-slate-200 ">
                       Drag & drop everywhere
@@ -559,7 +573,6 @@ export default function Home() {
                       <TableCheck />
                     </td>
                   </tr>
-                  {/* UPDATED: Toggle Cloud Sync Row */}
                   <tr>
                     <td className="p-4 pl-6 font-medium text-slate-900 border-r border-slate-200 ">
                       Toggle cloud sync ON/OFF
@@ -638,7 +651,7 @@ export default function Home() {
                   Lifetime
                 </h3>
                 <div className="text-4xl font-bold mb-6 text-indigo-900">
-                  $19
+                  $29
                 </div>
                 <p className="text-slate-500 text-sm mb-8 pb-8 border-b border-indigo-100">
                   Pay once, own it forever
