@@ -54,7 +54,8 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-indigo-500"></span>
               </span>
-              New in v1.1.9: Dark Mode Theme & Optional Full URL Display
+              New in v1.1.10: Smart Session Restore, Flexible Sharing & Dark
+              Mode Polish
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
               The ultimate tab manager <br />
