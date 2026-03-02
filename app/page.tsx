@@ -10,11 +10,14 @@ import { SmartPricingButton } from "./components/SmartPricingButton";
 
 // --- SEO RIÊNG CHO TRANG CHỦ ---
 export const metadata: Metadata = {
-  title: "OrgaNice – Tab Manager with Nested Folders",
+  title:
+    "OrgaNice – Tab Manager with Nested Folders, Smart Grouping & Snooze Tabs",
   description:
-    "Stop tab chaos. Organize browser tabs with nested folders, cloud sync, and quick notes. The minimalist alternative to OneTab and Session Buddy.",
+    "Stop tab chaos. Organize browser tabs with nested folders, smart tab grouping by rules, snooze tabs for later, cloud sync, and quick notes.",
   keywords: [
     "tab manager",
+    "tab grouping",
+    "snooze tabs",
     "productivity",
     "browser extension",
     "nested folders",
@@ -54,8 +57,7 @@ export default function Home() {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-indigo-500"></span>
               </span>
-              New in v1.1.10: Smart Session Restore, Flexible Sharing & Dark
-              Mode Polish
+              New in v1.1.11: Group Tabs by Rule & Snooze Tab
             </div>
             <h1 className="text-4xl md:text-6xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
               The ultimate tab manager <br />
@@ -176,6 +178,13 @@ export default function Home() {
                   </li>
                   <li className="flex gap-2">
                     <Icons.Check /> Workspace & tab context menus
+                  </li>
+                  <li className="flex gap-2">
+                    <Icons.Check />
+                    Group tabs by rules
+                  </li>
+                  <li className="flex gap-2">
+                    <Icons.Check /> Snooze tabs
                   </li>
                 </ul>
               </div>
@@ -596,6 +605,28 @@ export default function Home() {
                       <TableCheck />
                     </td>
                   </tr>
+                  <tr>
+                    <td className="p-4 pl-6 font-medium text-slate-900 border-r border-slate-200 ">
+                      Group tabs by rules
+                    </td>
+                    <td className="p-4 text-center font-bold text-indigo-600 border-r border-slate-200">
+                      2 rules
+                    </td>
+                    <td className="p-4 bg-indigo-50/30 font-bold text-indigo-700 text-center">
+                      Unlimited
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="p-4 pl-6 font-medium text-slate-900 border-r border-slate-200 ">
+                      Snooze tabs
+                    </td>
+                    <td className="p-4 text-center font-bold text-indigo-600 border-r border-slate-200">
+                      10 sessions
+                    </td>
+                    <td className="p-4 bg-indigo-50/30 font-bold text-indigo-700 text-center">
+                      Unlimited
+                    </td>
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -670,6 +701,12 @@ export default function Home() {
                   </li>
                   <li className="flex gap-3 text-slate-700 text-sm">
                     <Icons.Check /> <strong>Cloud Trash Bin</strong>
+                  </li>
+                  <li className="flex gap-3 text-slate-700 text-sm">
+                    <Icons.Check /> <strong>Unlimited Tab Group Rules</strong>
+                  </li>
+                  <li className="flex gap-3 text-slate-700 text-sm">
+                    <Icons.Check /> <strong>Unlimited Snooze Sessions</strong>
                   </li>
                   <li className="flex gap-3 text-slate-700 text-sm">
                     <Icons.Check /> No recurring fees
