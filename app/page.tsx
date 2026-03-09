@@ -64,9 +64,9 @@ export default function Home() {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-600"></span>
                 </span>
                 <p>
-                  <span className="text-indigo-600">v1.1.12</span>
+                  <span className="text-indigo-600">v1.1.13</span>
                   <span className="mx-2 text-slate-300">|</span>
-                  Tab Rules & Side Panel upgrade
+                  Custom Icons & Tab Rules upgrade
                 </p>
               </div>
             </div>
