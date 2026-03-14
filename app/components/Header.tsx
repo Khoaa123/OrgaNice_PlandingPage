@@ -1,15 +1,15 @@
-// app/components/Header.tsx
-"use client"; // <--- Bắt buộc để dùng onClick và window.scrollTo
+"use client";
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../../public/logo.png"; // Đảm bảo đường dẫn ảnh đúng với project của bạn
+import { usePathname } from "next/navigation";
+import Logo from "../../public/logo.png";
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
 
-  // Hiệu ứng: Khi cuộn xuống thì Header có thêm bóng đổ/nền mờ
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
@@ -17,15 +17,6 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  // Hàm xử lý cuộn lên đầu trang
-  const scrollToTop = (e: React.MouseEvent) => {
-    e.preventDefault(); // Ngăn chặn điều hướng mặc định
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
 
   return (
     <header
@@ -37,10 +28,8 @@ export default function Header() {
     >
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center h-12">
-          {/* Logo - Bấm vào sẽ cuộn lên đầu */}
           <Link
             href="/"
-            onClick={scrollToTop}
             className="flex items-center gap-1 cursor-pointer hover:opacity-80 transition-opacity"
           >
             <Image src={Logo} alt="OrgaNice Logo" width={32} height={32} />
@@ -50,18 +39,32 @@ export default function Header() {
           </Link>
 
           <nav className="hidden md:flex space-x-8 text-sm font-medium text-slate-500">
-            <a href="#features" className="hover:text-indigo-600 transition">
+            <Link
+              href="/#features"
+              className="hover:text-indigo-600 transition"
+            >
               Features
-            </a>
-            <a
-              href="#pro-features"
+            </Link>
+            <Link
+              href="/#pro-features"
               className="hover:text-indigo-600 transition"
             >
               Pro Power
-            </a>
-            <a href="#pricing" className="hover:text-indigo-600 transition">
+            </Link>
+            <Link href="/#pricing" className="hover:text-indigo-600 transition">
               Pricing
-            </a>
+            </Link>
+
+            <Link
+              href="/docs"
+              className={`transition ${
+                pathname.startsWith("/docs")
+                  ? "text-indigo-600 font-bold"
+                  : "hover:text-indigo-600"
+              }`}
+            >
+              Docs
+            </Link>
           </nav>
         </div>
       </div>
