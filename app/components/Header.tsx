@@ -65,6 +65,15 @@ export default function Header() {
             >
               Docs
             </Link>
+
+            <a
+              href="https://organice.featurebase.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-1.5 text-sm  hover:text-indigo-600 transition-colors"
+            >
+              Roadmap
+            </a>
           </nav>
         </div>
       </div>
