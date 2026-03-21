@@ -64,9 +64,9 @@ export default function Home() {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-600"></span>
                 </span>
                 <p>
-                  <span className="text-indigo-600">v1.1.19</span>
+                  <span className="text-indigo-600">v1.1.20</span>
                   <span className="mx-2 text-slate-300">|</span>
-                  Auto-close Tabs, Restore Behavior, Settings Improvements
+                  Default Collection, Custom New Tab URL
                 </p>
               </div>
             </div>
