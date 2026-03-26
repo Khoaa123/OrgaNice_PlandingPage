@@ -260,6 +260,22 @@ export default function DocsPage() {
                   routing.
                 </li>
               </ul>
+
+              <h4 className="font-semibold text-slate-800 mt-8 mb-2">
+                Tab Actions & Global Controls
+              </h4>
+              <ul className="list-disc pl-5 space-y-2 text-slate-700">
+                <li>
+                  <strong>Tab Context Menu:</strong> Right-click any individual
+                  tab to access dedicated actions like Pin, Open, Copy URL,
+                  Snooze, Add Note, and Remove.
+                </li>
+                <li>
+                  <strong>Open in Background:</strong> Toggle this option in
+                  Settings to open tabs silently without losing focus on the
+                  current dashboard view.
+                </li>
+              </ul>
             </section>
 
             {/* CHAPTER 3 */}
@@ -578,6 +594,11 @@ export default function DocsPage() {
                   <strong>Save Results:</strong> Click{" "}
                   <strong>Save Results as Collection</strong> to generate a new
                   collection from the current search query.
+                </li>
+                <li>
+                  <strong>Quick Creation:</strong> When searching yields no
+                  matches in the popup menu, click the prompt to instantly
+                  create a new collection using your search term.
                 </li>
               </ul>
 
