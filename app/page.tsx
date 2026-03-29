@@ -64,9 +64,10 @@ export default function Home() {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-600"></span>
                 </span>
                 <p>
-                  <span className="text-indigo-600">v1.1.23</span>
+                  <span className="text-indigo-600">v1.1.24</span>
                   <span className="mx-2 text-slate-300">|</span>
-                  Merge multiple collections, better quick notes previews
+                  Pause tab rules, merge multiple collections, better quick
+                  notes previews
                 </p>
               </div>
             </div>
