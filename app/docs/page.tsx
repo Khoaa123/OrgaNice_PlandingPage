@@ -1,3 +1,4 @@
+import { Zap } from "lucide-react";
 import DocVideo from "../components/DocVideo";
 import Header from "../components/Header";
 import { Icons } from "../components/Icons";
@@ -37,7 +38,25 @@ export default function DocsPage() {
       <Header />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-32 pb-24">
-        <div className="mb-12 border-b border-slate-200 pb-10">
+        <div className="mb-12 border-b border-slate-200 pb-10 flex flex-col items-center text-center">
+          <div className="relative inline-block mb-8 group">
+            <div className="absolute -inset-1 bg-linear-to-r from-indigo-500 to-purple-600 rounded-full blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+            <a
+              href="#automations"
+              className="relative inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-800 text-xs font-bold tracking-widest shadow-sm cursor-pointer hover:border-indigo-200 transition-colors"
+            >
+              <span className="relative flex h-2 w-2 shrink-0">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-500 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-600"></span>
+              </span>
+              <p className="truncate uppercase">
+                <span className="text-indigo-600">v1.1.24</span>
+                <span className="mx-2 text-slate-300">|</span>
+                New: Pausing Tab Rules (Bypass)
+              </p>
+            </a>
+          </div>
+
           <h1 className="text-4xl md:text-6xl font-black text-slate-900 tracking-tight">
             OrgaNice User Guide
           </h1>
@@ -409,6 +428,29 @@ export default function DocsPage() {
                   <strong>Rule Priority:</strong> Execution follows a
                   top-to-bottom order. Use drag-and-drop in the rule list to
                   adjust priority levels.
+                </li>
+              </ul>
+
+              <h3 className="text-xl font-bold text-slate-800 mt-8 mb-3">
+                Pausing Tab Rules (Bypass)
+              </h3>
+              <p className="text-slate-600 mb-4">
+                If you need to manually save tabs without triggering your active
+                rules, you can temporarily pause automations in two ways:
+              </p>
+              <ul className="list-disc pl-5 space-y-3 text-slate-700">
+                <li>
+                  <strong>Globally (Extension Menu):</strong> Open the OrgaNice
+                  popup menu and toggle <strong>Pause Save Rules</strong>. TThis
+                  bypasses all rules, allowing you to organize tabs manually.,
+                  allowing you to route tabs manually into a new session.
+                </li>
+                <li>
+                  <strong>Per Collection (Dashboard):</strong> Collections with
+                  active rules display a lightning icon ({" "}
+                  <Zap className="inline-block w-3.5 h-3.5 text-blue-500 mb-0.5" />{" "}
+                  ) next to their name. Click it to pause or resume rules for
+                  that specific collection.
                 </li>
               </ul>
 
