@@ -52,7 +52,7 @@ export default function DocsPage() {
               <p className="truncate uppercase">
                 <span className="text-indigo-600">v1.1.26</span>
                 <span className="mx-2 text-slate-300">|</span>
-                New: Replace Window & Sidebar Drag & Drop
+                New: Route by Rules, Replace Window & Sidebar Dnd
               </p>
             </a>
           </div>
@@ -240,10 +240,10 @@ export default function DocsPage() {
                 </li>
               </ul>
 
-              {/* <DocVideo
-                src="/videos/sidebar-dnd.mp4"
+              <DocVideo
+                src="/videos/drag-and-drop.mp4"
                 alt="Demo of dragging and dropping collections and folders in the sidebar"
-              /> */}
+              />
 
               <h3 className="text-xl font-bold text-slate-800 mt-8 mb-3">
                 Collections
@@ -460,6 +460,33 @@ export default function DocsPage() {
                   <strong>Rule Priority:</strong> Execution follows a
                   top-to-bottom order. Use drag-and-drop in the rule list to
                   adjust priority levels.
+                </li>
+              </ul>
+
+              <h3 className="text-xl font-bold text-slate-800 mt-8 mb-3">
+                Route by Rules (Manual Execution)
+              </h3>
+              <p className="text-slate-600 mb-4">
+                Instead of waiting for an automation trigger, you can manually
+                apply your active Smart Rules to instantly organize any existing
+                collection.
+              </p>
+              <ul className="list-disc pl-5 space-y-3 text-slate-700">
+                <li>
+                  <strong>How to use:</strong> Click the three-dot menu (
+                  <strong>...</strong>) on any collection, navigate to{" "}
+                  <strong>Advanced Tools</strong>, and select{" "}
+                  <strong>Route by Rules</strong>.
+                </li>
+                <li>
+                  <strong>Preview Window:</strong> A dialog will appear showing
+                  exactly which tabs match your rules and to which collections
+                  they will be routed.
+                </li>
+                <li>
+                  <strong>Execution:</strong> Upon confirmation, tabs are
+                  automatically distributed to their target locations, helping
+                  you quickly clean up a cluttered inbox.
                 </li>
               </ul>
 
