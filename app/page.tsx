@@ -669,7 +669,7 @@ export default function Home() {
                       Tab Rules
                     </td>
                     <td className="p-5 text-center font-bold text-slate-500 border-l border-slate-100">
-                      2 rules
+                      3 rules
                     </td>
                     <td className="p-5 bg-indigo-50/20 font-bold text-indigo-700 text-center border-l border-slate-100">
                       Unlimited

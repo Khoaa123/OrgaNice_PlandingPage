@@ -42,7 +42,7 @@ export default function DocsPage() {
           <div className="relative inline-block mb-8 group">
             <div className="absolute -inset-1 bg-linear-to-r from-indigo-500 to-purple-600 rounded-full blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
             <a
-              href="#automations"
+              href="#hierarchy"
               className="relative inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-800 text-xs font-bold tracking-widest shadow-sm cursor-pointer hover:border-indigo-200 transition-colors"
             >
               <span className="relative flex h-2 w-2 shrink-0">
@@ -50,9 +50,9 @@ export default function DocsPage() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-600"></span>
               </span>
               <p className="truncate uppercase">
-                <span className="text-indigo-600">v1.1.24</span>
+                <span className="text-indigo-600">v1.1.26</span>
                 <span className="mx-2 text-slate-300">|</span>
-                New: Pausing Tab Rules (Bypass)
+                New: Replace Window & Sidebar Drag & Drop
               </p>
             </a>
           </div>
@@ -205,16 +205,45 @@ export default function DocsPage() {
               <p className="text-slate-600">
                 Workspaces function as isolated environments (e.g., "Personal",
                 "Work"). You can create multiple workspaces, assign custom
-                colors, and reorder them in the left sidebar via drag-and-drop.
+                colors, and switch between them seamlessly.
               </p>
 
               <h3 className="text-xl font-bold text-slate-800 mt-8 mb-3">
                 Nested Folders
               </h3>
-              <p className="text-slate-600">
+              <p className="text-slate-600 mb-6">
                 Folders support infinite nesting. Custom colors and icons can be
                 assigned to folders for visual categorization.
               </p>
+
+              <h3 className="text-xl font-bold text-slate-800 mt-8 mb-3">
+                Sidebar Drag & Drop (Organization)
+              </h3>
+              <p className="text-slate-600 mb-4">
+                The left sidebar is fully interactive, allowing you to
+                intuitively restructure your entire workspace using
+                drag-and-drop:
+              </p>
+              <ul className="list-disc pl-5 space-y-2 text-slate-700">
+                <li>
+                  <strong>Nest Folders:</strong> Drag a folder into another
+                  folder to instantly create a sub-folder hierarchy.
+                </li>
+                <li>
+                  <strong>Move Collections:</strong> Grab any collection from
+                  the sidebar and drop it into a specific folder, or drag it out
+                  to the workspace root.
+                </li>
+                <li>
+                  <strong>Reorder Everything:</strong> Drag workspaces, folders,
+                  or collections up and down to change their display priority.
+                </li>
+              </ul>
+
+              {/* <DocVideo
+                src="/videos/sidebar-dnd.mp4"
+                alt="Demo of dragging and dropping collections and folders in the sidebar"
+              /> */}
 
               <h3 className="text-xl font-bold text-slate-800 mt-8 mb-3">
                 Collections
@@ -237,10 +266,13 @@ export default function DocsPage() {
                   at the top of the dashboard view.
                 </li>
                 <li>
-                  <strong>Restore:</strong> Opens all saved tabs. If the
-                  collection contains more than 15 tabs, OrgaNice automatically
-                  enables Safe Load mode to open them in batches and prevent
-                  browser crashes.
+                  <strong>Restore & Replace:</strong> Opens all saved tabs in a
+                  collection. You can choose to open them in the{" "}
+                  <strong>Current Window</strong>, a <strong>New Window</strong>
+                  , or <strong>Replace Current Window</strong> (which instantly
+                  clears your existing tabs and swaps them with the collection).
+                  For heavy collections (15+ tabs), Safe Load mode opens them in
+                  batches to prevent browser crashes.
                 </li>
               </ul>
 
@@ -441,9 +473,8 @@ export default function DocsPage() {
               <ul className="list-disc pl-5 space-y-3 text-slate-700">
                 <li>
                   <strong>Globally (Extension Menu):</strong> Open the OrgaNice
-                  popup menu and toggle <strong>Pause Save Rules</strong>. TThis
-                  bypasses all rules, allowing you to organize tabs manually.,
-                  allowing you to route tabs manually into a new session.
+                  popup menu and toggle <strong>Pause Save Rules</strong>. This
+                  bypasses all rules, allowing you to organize tabs manually.
                 </li>
                 <li>
                   <strong>Per Collection (Dashboard):</strong> Collections with

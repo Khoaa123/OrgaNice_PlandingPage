@@ -1,10 +1,41 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Maximize2 } from "lucide-react";
 
-export default function DocVideo({ src, alt }: { src: string; alt?: string }) {
+interface DocVideoProps {
+  src: string;
+  alt?: string;
+  poster?: string;
+}
+
+export default function DocVideo({ src, alt, poster }: DocVideoProps) {
   const [isZoomed, setIsZoomed] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isIntersecting, setIsIntersecting] = useState(false);
+
+  useEffect(() => {
+    if (!window.IntersectionObserver) {
+      setIsIntersecting(true);
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsIntersecting(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "200px" },
+    );
+
+    if (videoRef.current) {
+      observer.observe(videoRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <>
@@ -13,14 +44,19 @@ export default function DocVideo({ src, alt }: { src: string; alt?: string }) {
         onClick={() => setIsZoomed(true)}
       >
         <video
-          src={src}
-          autoPlay
+          ref={videoRef}
+          autoPlay={isIntersecting}
           loop
           muted
           playsInline
-          className="h-auto max-w-full transition-opacity duration-300 group-hover:opacity-60"
+          preload={isIntersecting ? "auto" : "none"}
+          poster={poster}
+          className="h-auto w-full max-w-full object-cover transition-opacity duration-300 group-hover:opacity-60"
           aria-label={alt}
-        />
+        >
+          {isIntersecting && <source src={src} type="video/mp4" />}
+          Your browser does not support the video tag.
+        </video>
 
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center opacity-0 transition-opacity duration-300 group-hover:opacity-100">
           <div className="flex items-center gap-2 rounded-full bg-black/70 px-4 py-2 text-sm font-medium text-white backdrop-blur-md">

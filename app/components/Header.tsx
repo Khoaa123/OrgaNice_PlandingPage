@@ -32,7 +32,6 @@ export default function Header() {
             href="/"
             className="flex items-center gap-1 cursor-pointer hover:opacity-80 transition-opacity"
           >
-            <Image src={Logo} alt="OrgaNice Logo" width={32} height={32} />
             <span className="text-xl font-bold text-slate-900 tracking-tight">
               OrgaNice
             </span>
