@@ -750,20 +750,33 @@ export default function Home() {
                 </button>
               </div>
 
-              {/* 3. Lifetime Plan */}
-              <div className="p-10 relative overflow-hidden rounded-2xl border border-slate-200 bg-white flex flex-col h-full hover:shadow-lg hover:border-indigo-500 transition-all duration-300">
-                <div className="absolute top-0 right-0 bg-indigo-500 text-white text-xs font-bold px-3 py-1 rounded-bl-lg rounded-tr-lg">
-                  ONE-TIME
+              <div className="p-10 relative overflow-hidden rounded-2xl border-2 border-indigo-500 bg-white flex flex-col h-full shadow-xl shadow-indigo-100 hover:shadow-2xl transition-all duration-300">
+                <div className="absolute top-0 right-0 bg-indigo-500 text-white text-xs font-bold px-3 py-1.5 rounded-bl-lg rounded-tr-lg tracking-wider">
+                  EARLY SUPPORTER
                 </div>
                 <h3 className="font-bold text-xl mb-2 text-indigo-600">
                   Lifetime
                 </h3>
-                <div className="text-4xl font-extrabold mb-8 text-slate-900">
-                  $50
+
+                <div className="flex items-baseline gap-2 mb-2">
+                  <div className="text-4xl font-extrabold text-slate-900">
+                    $10
+                  </div>
+                  <div className="text-lg font-medium text-slate-400 line-through">
+                    $50
+                  </div>
                 </div>
-                <p className="text-slate-500 text-sm mb-8 pb-8 border-b border-slate-100">
-                  Pay once, own it forever
+                <p className="text-slate-500 text-sm mb-6 pb-6 border-b border-slate-100">
+                  Pay once, own it forever. Limited to first 100 users.
                 </p>
+
+                <div className="mb-8 bg-indigo-50 text-indigo-800 text-sm px-3 py-3 rounded-xl font-medium text-center border border-indigo-200">
+                  Use code{" "}
+                  <strong className="font-black text-indigo-600 text-base mx-1">
+                    EARLY10
+                  </strong>{" "}
+                  at checkout
+                </div>
                 <ul className="space-y-5 mb-10 flex-1">
                   <li className="flex gap-4 items-center text-slate-900 font-medium">
                     <div className="text-indigo-600">
