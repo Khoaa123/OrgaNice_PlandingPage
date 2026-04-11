@@ -464,6 +464,32 @@ export default function DocsPage() {
               </ul>
 
               <h3 className="text-xl font-bold text-slate-800 mt-8 mb-3">
+                Simple Auto-Save Rule (Quick Setup)
+              </h3>
+              <p className="text-slate-600 mb-4">
+                If you need to quickly route tabs without configuring complex
+                logic, you can create a basic auto-save rule directly from your
+                dashboard.
+              </p>
+              <ul className="list-disc pl-5 space-y-3 text-slate-700">
+                <li>
+                  <strong>How to access:</strong> Click the three-dot menu (
+                  <strong>...</strong>) on any collection, navigate to{" "}
+                  <strong>Advanced Tools</strong>, and select{" "}
+                  <strong>Simple Auto-Save Rule</strong>.
+                </li>
+                <li>
+                  <strong>Functionality:</strong> Simply enter a domain or
+                  keyword (e.g.,{" "}
+                  <code className="bg-slate-100 px-1.5 py-0.5 rounded font-mono text-xs">
+                    youtube.com
+                  </code>
+                  ). Any future tabs matching this input will automatically be
+                  routed to this specific collection.
+                </li>
+              </ul>
+
+              <h3 className="text-xl font-bold text-slate-800 mt-8 mb-3">
                 Route by Rules (Manual Execution)
               </h3>
               <p className="text-slate-600 mb-4">

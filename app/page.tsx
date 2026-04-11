@@ -64,10 +64,9 @@ export default function Home() {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-600"></span>
                 </span>
                 <p>
-                  <span className="text-indigo-600">v1.1.24</span>
+                  <span className="text-indigo-600">v1.1.26</span>
                   <span className="mx-2 text-slate-300">|</span>
-                  Pause tab rules, merge multiple collections, better quick
-                  notes previews
+                  Route by Rules, Replace Window & Sidebar Dnd
                 </p>
               </div>
             </div>
@@ -644,6 +643,17 @@ export default function Home() {
                   </tr>
                   <tr className="bg-indigo-50/30 hover:bg-indigo-50/50 transition-colors">
                     <td className="p-5 pl-6 font-bold text-indigo-900">
+                      Batch Find & Replace URLs
+                    </td>
+                    <td className="p-5 border-l border-slate-100">
+                      <TableCross />
+                    </td>
+                    <td className="p-5 border-l border-slate-100 bg-indigo-100/30">
+                      <TableCheck />
+                    </td>
+                  </tr>
+                  <tr className="bg-indigo-50/30 hover:bg-indigo-50/50 transition-colors">
+                    <td className="p-5 pl-6 font-bold text-indigo-900">
                       Toggle cloud sync ON/OFF
                     </td>
                     <td className="p-5 border-l border-slate-100">
@@ -778,6 +788,12 @@ export default function Home() {
                       <Icons.Check />
                     </div>{" "}
                     Cloud Trash Bin
+                  </li>
+                  <li className="flex gap-4 items-center text-slate-900 font-medium">
+                    <div className="text-indigo-600">
+                      <Icons.Check />
+                    </div>{" "}
+                    Batch Find & Replace URLs
                   </li>
                   <li className="flex gap-4 items-center text-slate-900 font-medium">
                     <div className="text-indigo-600">
