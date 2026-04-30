@@ -50,9 +50,9 @@ export default function DocsPage() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-600"></span>
               </span>
               <p className="truncate uppercase">
-                <span className="text-indigo-600">v1.1.26</span>
+                <span className="text-indigo-600">v1.1.27</span>
                 <span className="mx-2 text-slate-300">|</span>
-                New: Route by Rules, Replace Window & Sidebar Dnd
+                New: Advanced Tab Sorting & Native Chrome Tab Groups
               </p>
             </a>
           </div>
@@ -262,6 +262,9 @@ export default function DocsPage() {
                   icon, and color.
                 </li>
                 <li>
+                  <strong>Open as Tab Group:</strong> Instantly convert your collection into a native Chrome Tab Group. The Tab Group automatically adopts your collection's name and intelligently matches its custom color.
+                </li>
+                <li>
                   <strong>Pin to Top:</strong> Pin collections to maintain them
                   at the top of the dashboard view.
                 </li>
@@ -289,8 +292,7 @@ export default function DocsPage() {
                   to move or copy multiple tabs simultaneously.
                 </li>
                 <li>
-                  <strong>Sort Tabs:</strong> Apply alphabetical (A–Z) sorting,
-                  or remove sorting for manual drag-and-drop ordering.
+                  <strong>Sort Tabs:</strong> Sort tabs by Name (A-Z, Z-A), Date Added (Newest, Oldest), or use Manual Drag & Drop ordering. Pinned tabs remain safely anchored at the top regardless of the sort mode.
                 </li>
                 <li>
                   <strong>Move to Folder:</strong> Transfer the entire

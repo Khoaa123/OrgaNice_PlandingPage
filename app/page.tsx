@@ -64,9 +64,9 @@ export default function Home() {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-600"></span>
                 </span>
                 <p>
-                  <span className="text-indigo-600">v1.1.26</span>
+                  <span className="text-indigo-600">v1.1.27</span>
                   <span className="mx-2 text-slate-300">|</span>
-                  Route by Rules, Replace Window & Sidebar Dnd
+                  New: Advanced Sort Options & Chrome Tab Groups
                 </p>
               </div>
             </div>
@@ -230,6 +230,14 @@ export default function Home() {
                     <span className="pt-0.5">
                       Workspace & tab context menus
                     </span>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <Icons.Check />{" "}
+                    <span className="pt-0.5">Advanced sort options</span>
+                  </li>
+                  <li className="flex gap-3 items-start">
+                    <Icons.Check />{" "}
+                    <span className="pt-0.5">Open as Chrome Tab Group</span>
                   </li>
                   <li className="flex gap-3 items-start">
                     <Icons.Check /> <span className="pt-0.5">Tab Rules</span>
