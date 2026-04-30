@@ -292,7 +292,7 @@ export default function DocsPage() {
                   to move or copy multiple tabs simultaneously.
                 </li>
                 <li>
-                  <strong>Sort Tabs:</strong> Sort tabs by Name (A-Z, Z-A), Date Added (Newest, Oldest), or use Manual Drag & Drop ordering. Pinned tabs remain safely anchored at the top regardless of the sort mode.
+                  <strong>Sort Tabs:</strong> Sort tabs by Name (A-Z, Z-A) or Date Added (Newest, Oldest). Pinned tabs remain safely anchored at the top regardless of the sort mode.
                 </li>
                 <li>
                   <strong>Move to Folder:</strong> Transfer the entire
