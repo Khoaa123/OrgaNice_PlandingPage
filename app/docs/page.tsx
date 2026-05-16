@@ -42,7 +42,7 @@ export default function DocsPage() {
           <div className="relative inline-block mb-8 group">
             <div className="absolute -inset-1 bg-linear-to-r from-indigo-500 to-purple-600 rounded-full blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
             <a
-              href="#hierarchy"
+              href="#cleanup"
               className="relative inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-800 text-xs font-bold tracking-widest shadow-sm cursor-pointer hover:border-indigo-200 transition-colors"
             >
               <span className="relative flex h-2 w-2 shrink-0">
@@ -50,9 +50,9 @@ export default function DocsPage() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-600"></span>
               </span>
               <p className="truncate uppercase">
-                <span className="text-indigo-600">v1.1.27</span>
+                <span className="text-indigo-600">v1.1.28</span>
                 <span className="mx-2 text-slate-300">|</span>
-                New: Advanced Tab Sorting & Native Chrome Tab Groups
+                New: Tab Tree Mode
               </p>
             </a>
           </div>
@@ -262,7 +262,10 @@ export default function DocsPage() {
                   icon, and color.
                 </li>
                 <li>
-                  <strong>Open as Tab Group:</strong> Instantly convert your collection into a native Chrome Tab Group. The Tab Group automatically adopts your collection's name and intelligently matches its custom color.
+                  <strong>Open as Tab Group:</strong> Instantly convert your
+                  collection into a native Chrome Tab Group. The Tab Group
+                  automatically adopts your collection's name and intelligently
+                  matches its custom color.
                 </li>
                 <li>
                   <strong>Pin to Top:</strong> Pin collections to maintain them
@@ -292,7 +295,9 @@ export default function DocsPage() {
                   to move or copy multiple tabs simultaneously.
                 </li>
                 <li>
-                  <strong>Sort Tabs:</strong> Sort tabs by Name (A-Z, Z-A) or Date Added (Newest, Oldest). Pinned tabs remain safely anchored at the top regardless of the sort mode.
+                  <strong>Sort Tabs:</strong> Sort tabs by Name (A-Z, Z-A) or
+                  Date Added (Newest, Oldest). Pinned tabs remain safely
+                  anchored at the top regardless of the sort mode.
                 </li>
                 <li>
                   <strong>Move to Folder:</strong> Transfer the entire
@@ -596,6 +601,21 @@ export default function DocsPage() {
                   <strong>Cleanup View (Sparkles icon):</strong> Opens an
                   interface grouping all active tabs by domain, allowing
                   selective saving and closure.
+                </li>
+              </ul>
+
+              <h3 className="text-xl font-bold text-slate-800 mb-3">
+                Tab Tree View
+              </h3>
+              <p className="text-slate-600 mb-3">
+                The list of currently open tabs now supports Tree View for
+                parent-child tab relationships.
+              </p>
+              <ul className="list-disc pl-5 space-y-3 text-slate-700 mb-8">
+                <li>Switch between Tree and List mode.</li>
+                <li>
+                  Changing mode in one dashboard/side panel updates other open
+                  instances.
                 </li>
               </ul>
 
