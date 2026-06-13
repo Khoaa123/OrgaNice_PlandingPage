@@ -42,7 +42,7 @@ export default function DocsPage() {
           <div className="relative inline-block mb-8 group">
             <div className="absolute -inset-1 bg-linear-to-r from-indigo-500 to-purple-600 rounded-full blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
             <a
-              href="#cleanup"
+              href="#search-notes"
               className="relative inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white border border-slate-200 text-slate-800 text-xs font-bold tracking-widest shadow-sm cursor-pointer hover:border-indigo-200 transition-colors"
             >
               <span className="relative flex h-2 w-2 shrink-0">
@@ -50,9 +50,9 @@ export default function DocsPage() {
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-600"></span>
               </span>
               <p className="truncate uppercase">
-                <span className="text-indigo-600">v1.1.28</span>
+                <span className="text-indigo-600">v1.1.31</span>
                 <span className="mx-2 text-slate-300">|</span>
-                New: Tab Tree Mode
+                New: Advanced Search Filters (PRO)
               </p>
             </a>
           </div>
@@ -209,11 +209,14 @@ export default function DocsPage() {
               </p>
 
               <h3 className="text-xl font-bold text-slate-800 mt-8 mb-3">
-                Nested Folders
+                Nested Folders & Unified Date Badges
               </h3>
-              <p className="text-slate-600 mb-6">
+              <p className="text-slate-600 mb-4">
                 Folders support infinite nesting. Custom colors and icons can be
                 assigned to folders for visual categorization.
+              </p>
+              <p className="text-slate-600 mb-6">
+                Creation dates for both folders and collections are displayed cleanly with unified date badges using the <strong>Day/Month/Year (DD/MM/YYYY)</strong> format for intuitive age tracking.
               </p>
 
               <h3 className="text-xl font-bold text-slate-800 mt-8 mb-3">
@@ -246,11 +249,21 @@ export default function DocsPage() {
               />
 
               <h3 className="text-xl font-bold text-slate-800 mt-8 mb-3">
-                Collections
+                Collections & Visual Orientation
               </h3>
               <p className="text-slate-600 mb-4">
-                A Collection is a saved group of tabs. The following actions are
-                available for managing Collections:
+                A Collection is a saved group of tabs. To help you stay oriented:
+              </p>
+              <ul className="list-disc pl-5 space-y-2 text-slate-700 mb-6">
+                <li>
+                  <strong>Persistent Collection Highlight:</strong> When you select a collection, its border and sidebar highlights remain fully active. Unlike previous versions where the highlight would fade after a few seconds, it now stays highlighted, keeping a clear visual indicator of your active workspace location.
+                </li>
+                <li>
+                  <strong>Smoother Middle Panel Scrolling:</strong> Experience a polished interface where the middle panel scroll is fully optimized. Expanding and viewing collections with dozens of tabs is now seamless, resolving previous scroll jumping issues.
+                </li>
+              </ul>
+              <p className="text-slate-600 mb-4">
+                The following actions are available for managing Collections:
               </p>
 
               <h4 className="font-semibold text-slate-800 mt-6 mb-2">
@@ -309,8 +322,8 @@ export default function DocsPage() {
                   visual dividers.
                 </li>
                 <li>
-                  <strong>Export Links:</strong> Copy URLs to the clipboard in
-                  plain text or Markdown format.
+                  <strong>Export Links & Custom Styles:</strong> Copy URLs to the clipboard in
+                  plain text, Markdown format, or customize the export format with custom styles and layouts to match your sharing preferences.
                 </li>
                 <li>
                   <strong>Advanced Tools:</strong> Execute Clean up duplicates,
@@ -605,17 +618,18 @@ export default function DocsPage() {
               </ul>
 
               <h3 className="text-xl font-bold text-slate-800 mb-3">
-                Tab Tree View
+                Tab Tree View & Improvements
               </h3>
               <p className="text-slate-600 mb-3">
-                The list of currently open tabs now supports Tree View for
-                parent-child tab relationships.
+                The list of currently open tabs supports a visual Tree View to track parent-child tab relationships and your research paths.
               </p>
               <ul className="list-disc pl-5 space-y-3 text-slate-700 mb-8">
-                <li>Switch between Tree and List mode.</li>
+                <li>Switch between Tree and List modes.</li>
                 <li>
-                  Changing mode in one dashboard/side panel updates other open
-                  instances.
+                  Changing mode in one dashboard/side panel automatically updates other open extension instances.
+                </li>
+                <li>
+                  <strong>Tab Tree Stability:</strong> Stability enhancements fix visual offsets and edge cases when dragging/dropping parent tabs or during browser session restore.
                 </li>
               </ul>
 
@@ -720,7 +734,7 @@ export default function DocsPage() {
               </h2>
 
               <h3 className="text-xl font-bold text-slate-800 mb-3">
-                Global Search
+                Global Search & Command Palette
               </h3>
               <p className="text-slate-600 mb-3">
                 Access the command palette by pressing{" "}
@@ -735,8 +749,10 @@ export default function DocsPage() {
                   tabs, saved links, Collections, Folders, and Workspaces.
                 </li>
                 <li>
-                  <strong>Actions:</strong> Copy URLs directly from search
-                  results or launch entire matched collections.
+                  <strong>Enhanced Search Navigation:</strong> Search results now display the website's original favicons alongside exact location breadcrumbs (showing the Workspace, Folder, and Collection the tab belongs to) for quick visual reference.
+                </li>
+                <li>
+                  <strong>Search Results Location Link:</strong> Click directly on the breadcrumb path link underneath any saved tab in search results. This immediately closes the search window, switches to its workspace, opens the parent folder, and scrolls/highlights the containing collection.
                 </li>
                 <li>
                   <strong>Save Results:</strong> Click{" "}
@@ -745,8 +761,37 @@ export default function DocsPage() {
                 </li>
                 <li>
                   <strong>Quick Creation:</strong> When searching yields no
-                  matches in the popup menu, click the prompt to instantly
-                  create a new collection using your search term.
+                  matches, click the prompt to instantly create a new collection using your search query.
+                </li>
+              </ul>
+
+              <div className="bg-indigo-50 border border-indigo-100 rounded-xl p-5 mb-8">
+                <h4 className="font-semibold text-indigo-900 flex items-center gap-2 mb-2">
+                  Advanced Search Filters (PRO)
+                </h4>
+                <p className="text-sm text-indigo-800/90 leading-relaxed mb-3">
+                  PRO users can access a robust search filter engine. Refine your tab search by toggle-matching criteria:
+                </p>
+                <ul className="list-disc pl-5 space-y-2 text-sm text-indigo-800/80 mb-3">
+                  <li><strong>Filter Scope:</strong> Limit searches specifically to Tab Titles, Tab URLs, or Tab Notes.</li>
+                  <li><strong>Creation Dates:</strong> Filter by date ranges to locate items saved within a specific period.</li>
+                  <li><strong>Status Flags:</strong> Instantly filter for tabs that are Pinned, Starred, or contain Notes.</li>
+                  <li><strong>Regular Expressions (Regex):</strong> Toggle Regex mode to run complex pattern matching securely across your saved tabs database.</li>
+                </ul>
+              </div>
+
+              <h3 className="text-xl font-bold text-slate-800 mb-3">
+                Starred Links Hub
+              </h3>
+              <p className="text-slate-600 mb-4">
+                Keep your most important bookmarks readily available with the Starred Links feature:
+              </p>
+              <ul className="list-disc pl-5 space-y-2 text-slate-700 mb-8">
+                <li>
+                  <strong>Quick Star:</strong> Star any saved link in your collections with a single click.
+                </li>
+                <li>
+                  <strong>Dedicated Hub:</strong> View and search all your starred links in one central tab/hub within the extension interface for rapid access.
                 </li>
               </ul>
 
@@ -756,7 +801,7 @@ export default function DocsPage() {
               <ul className="list-disc pl-5 space-y-3 text-slate-700 mb-8">
                 <li>
                   <strong>Quick Notes (Dashboard):</strong> A floating rich-text
-                  editor for independent notes, supporting color-coding.
+                  editor for independent notes, supporting color-coding and custom **Note Titles** to easily search and categorize sticky notes.
                 </li>
                 <li>
                   <strong>Collection Notes:</strong> Contextual text attached to

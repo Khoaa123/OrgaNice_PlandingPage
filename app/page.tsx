@@ -64,9 +64,9 @@ export default function Home() {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-600"></span>
                 </span>
                 <p>
-                  <span className="text-indigo-600">v1.1.28</span>
+                  <span className="text-indigo-600">v1.1.31</span>
                   <span className="mx-2 text-slate-300">|</span>
-                  New: Tab Tree Mode
+                  New: Advanced Search Filters (PRO)
                 </p>
               </div>
             </div>
@@ -768,7 +768,7 @@ export default function Home() {
 
                 <div className="flex items-baseline gap-2 mb-2">
                   <div className="text-4xl font-extrabold text-slate-900">
-                    $10
+                    $20
                   </div>
                   <div className="text-lg font-medium text-slate-400 line-through">
                     $50
@@ -781,7 +781,7 @@ export default function Home() {
                 <div className="mb-8 bg-indigo-50 text-indigo-800 text-sm px-3 py-3 rounded-xl font-medium text-center border border-indigo-200">
                   Use code{" "}
                   <strong className="font-black text-indigo-600 text-base mx-1">
-                    EARLY10
+                    EARLY20
                   </strong>{" "}
                   at checkout
                 </div>
