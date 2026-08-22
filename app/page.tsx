@@ -64,9 +64,9 @@ export default function Home() {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-indigo-600"></span>
                 </span>
                 <p>
-                  <span className="text-indigo-600">v1.1.31</span>
+                  <span className="text-indigo-600">v1.1.33</span>
                   <span className="mx-2 text-slate-300">|</span>
-                  New: Advanced Search Filters (PRO)
+                  New: Duplicate Cleanup Tools
                 </p>
               </div>
             </div>
@@ -768,20 +768,20 @@ export default function Home() {
 
                 <div className="flex items-baseline gap-2 mb-2">
                   <div className="text-4xl font-extrabold text-slate-900">
-                    $20
+                    $10
                   </div>
                   <div className="text-lg font-medium text-slate-400 line-through">
                     $50
                   </div>
                 </div>
                 <p className="text-slate-500 text-sm mb-6 pb-6 border-b border-slate-100">
-                  Pay once, own it forever. Limited to first 100 users.
+                  Pay once, own it forever. No subscription, no renewals.
                 </p>
 
                 <div className="mb-8 bg-indigo-50 text-indigo-800 text-sm px-3 py-3 rounded-xl font-medium text-center border border-indigo-200">
                   Use code{" "}
                   <strong className="font-black text-indigo-600 text-base mx-1">
-                    EARLY20
+                    EARLY10
                   </strong>{" "}
                   at checkout
                 </div>
